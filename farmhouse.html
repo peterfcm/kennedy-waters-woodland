@@ -1,0 +1,1019 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Farmhouse — 6-bedroom Staffordshire retreat with hot tub & sauna sleeping 12 | Kennedy Waters & Woodland</title>
+<meta name="description" content="Six bedrooms, a wood-fired hot tub, a long table for twelve. Self-catered stay near Cannock Chase, Staffordshire.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..600&family=Hanken+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>/* Kennedy Waters & Woodland, shared site styles */
+:root{
+  --green:#1c4034;
+  --green-deep:#133027;
+  --green-mid:#2f5447;
+  --bg:#f7f5ee;
+  --bg-soft:#eee9db;
+  --ochre:#a8813a;
+  --ink:#23271f;
+  --muted:#5e6356;
+  --line:#ddd6c4;
+  --cream:#f7f5ee;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Hanken Grotesk',sans-serif;background:var(--bg);color:var(--ink);font-weight:400;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+h1,h2,h3,.display{font-family:'Fraunces',serif;font-weight:400;line-height:1.1;letter-spacing:-.01em}
+.eyebrow{font-size:.72rem;letter-spacing:.26em;text-transform:uppercase;font-weight:700;color:var(--ochre)}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1200px;margin:0 auto;padding:0 36px}
+.btn{display:inline-flex;align-items:center;gap:11px;background:var(--green);color:var(--cream);padding:15px 32px;border-radius:4px;font-weight:600;font-size:.9rem;letter-spacing:.01em;transition:.3s;border:none;cursor:pointer}
+.btn:hover{background:var(--green-deep);transform:translateY(-1px)}
+.btn svg{transition:.3s}.btn:hover svg{transform:translateX(4px)}
+.btn-light{background:var(--cream);color:var(--green)}
+.btn-light:hover{background:#fff}
+.btn-ghost{background:transparent;color:var(--green);border:1px solid var(--green)}
+.btn-ghost:hover{background:var(--green);color:var(--cream)}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:1000;padding:20px 0;transition:.4s}
+nav.scrolled,nav.solid{background:rgba(247,245,238,.95);backdrop-filter:blur(10px);box-shadow:0 1px 0 var(--line);padding:13px 0}
+.nav-in{display:flex;align-items:center;justify-content:space-between}
+.logo{font-family:'Fraunces',serif;font-size:1.16rem;letter-spacing:.01em;color:var(--cream);transition:.4s}
+.logo b{font-weight:600}
+nav.scrolled .logo,nav.solid .logo{color:var(--green)}
+.nav-links{display:flex;gap:32px;align-items:center}
+.nav-links a{font-size:.85rem;font-weight:600;letter-spacing:.01em;color:rgba(247,245,238,.95);transition:.3s}
+nav.scrolled .nav-links a,nav.solid .nav-links a{color:var(--ink)}
+.nav-links a:hover{color:var(--ochre)}
+.nav-cta{background:rgba(247,245,238,.15);border:1px solid rgba(247,245,238,.55);padding:8px 18px;border-radius:4px}
+nav.scrolled .nav-cta,nav.solid .nav-cta{background:var(--green);border-color:var(--green);color:var(--cream)!important}
+.nav-cta:hover{background:var(--cream)!important;border-color:var(--cream)!important;color:var(--green)!important}
+.burger{display:none;flex-direction:column;gap:5px;cursor:pointer}
+.burger span{width:24px;height:2px;background:var(--cream)}
+nav.scrolled .burger span,nav.solid .burger span{background:var(--green)}
+
+/* FOOTER */
+footer{background:var(--green-deep);color:rgba(247,245,238,.8);padding:78px 0 34px;margin-top:80px}
+.foot-top{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:42px;padding-bottom:48px;border-bottom:1px solid rgba(247,245,238,.13)}
+.foot-brand .logo{color:var(--cream);font-size:1.36rem;display:block;margin-bottom:15px}
+.foot-brand p{font-size:.94rem;max-width:300px;color:rgba(247,245,238,.6)}
+footer h5{font-family:'Hanken Grotesk';text-transform:uppercase;letter-spacing:.16em;font-size:.7rem;color:#e0bd77;margin-bottom:18px;font-weight:700}
+footer ul{list-style:none}
+footer li{margin-bottom:11px;font-size:.94rem}
+footer li a:hover{color:#e0bd77}
+.foot-bottom{padding-top:26px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:14px;font-size:.8rem;color:rgba(247,245,238,.45)}
+
+.reveal{opacity:0;transform:translateY(26px);transition:1s cubic-bezier(.2,.7,.3,1)}
+.reveal.in{opacity:1;transform:none}
+.d1{transition-delay:.12s}.d2{transition-delay:.24s}.d3{transition-delay:.36s}.d4{transition-delay:.48s}
+
+/* ============= PROPERTY PAGE ============= */
+.prop-hero{position:relative;min-height:78vh;display:flex;align-items:flex-end;overflow:hidden;background:#3c4a3b}
+.prop-hero::after{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(to top,rgba(19,48,39,.85),rgba(19,48,39,.15) 50%,rgba(19,48,39,.1) 80%)}
+.prop-hero-scene{position:absolute;inset:0;width:100%;height:100%;z-index:0}
+.prop-hero-content{position:relative;z-index:2;padding-bottom:8vh;max-width:780px}
+.prop-hero .eyebrow{color:#e0bd77}
+.prop-hero h1{color:var(--cream);font-size:clamp(2.6rem,6vw,5rem);font-weight:300;margin-top:18px}
+.prop-hero h1 em{font-style:italic;font-weight:400}
+.prop-hero .lede{color:rgba(247,245,238,.92);font-size:clamp(1rem,1.4vw,1.22rem);margin-top:22px;max-width:600px;font-weight:300}
+
+/* facts bar */
+.facts{background:#fff;border-bottom:1px solid var(--line)}
+.facts-in{display:grid;grid-template-columns:repeat(5,1fr);gap:20px;padding:32px 0}
+.fact{padding:0 12px;border-right:1px solid var(--line)}
+.fact:last-child{border-right:none}
+.fact-label{font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);font-weight:600;margin-bottom:6px}
+.fact-value{font-family:'Fraunces',serif;font-size:1.08rem;color:var(--ink);line-height:1.3}
+
+/* main layout */
+.prop-body{padding:96px 0 60px}
+.prop-grid{display:grid;grid-template-columns:1.4fr .9fr;gap:80px;align-items:start}
+.prop-main h2{font-size:clamp(1.7rem,2.6vw,2.4rem);font-weight:300;margin-bottom:22px}
+.prop-main h2 em{font-style:italic;color:var(--green)}
+.prop-main p{color:var(--ink);font-size:1.06rem;margin-bottom:18px;line-height:1.75}
+.prop-main p:first-of-type::first-letter{font-family:'Fraunces',serif;font-size:3.2rem;float:left;line-height:.92;padding:6px 12px 0 0;color:var(--green);font-weight:400}
+.perfect-for{margin-top:38px;padding-top:32px;border-top:1px solid var(--line)}
+.perfect-for h3{font-family:'Fraunces',serif;font-size:1.3rem;font-weight:400;margin-bottom:18px}
+.perfect-for ul{list-style:none;display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.perfect-for li{font-size:.97rem;color:var(--muted);display:flex;align-items:center;gap:10px}
+.perfect-for li::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--ochre);flex-shrink:0}
+
+/* booking card sidebar */
+.book-card{background:#fff;border:1px solid var(--line);border-radius:6px;padding:32px;position:sticky;top:100px;box-shadow:0 18px 36px -28px rgba(19,48,39,.35)}
+.book-card .from{color:var(--muted);font-size:.84rem;letter-spacing:.05em;text-transform:uppercase;font-weight:600;margin-bottom:6px}
+.book-card .price{font-family:'Fraunces',serif;font-size:2.4rem;font-weight:400;color:var(--green);line-height:1}
+.book-card .price small{font-family:'Hanken Grotesk';font-size:.92rem;color:var(--muted);font-weight:500;margin-left:6px}
+.book-placeholder{margin:28px 0;padding:28px 22px;background:var(--bg);border:1px dashed var(--line);border-radius:6px;text-align:center}
+.book-placeholder svg{width:30px;height:30px;stroke:var(--ochre);margin-bottom:12px}
+.book-placeholder h4{font-family:'Fraunces',serif;font-size:1.08rem;font-weight:500;margin-bottom:6px;color:var(--green)}
+.book-placeholder p{font-size:.86rem;color:var(--muted);line-height:1.5}
+.book-card .btn{width:100%;justify-content:center;margin-top:8px}
+.book-mini-list{margin-top:26px;padding-top:24px;border-top:1px solid var(--line);font-size:.86rem;color:var(--muted)}
+.book-mini-list li{list-style:none;display:flex;align-items:center;gap:9px;padding:5px 0}
+.book-mini-list li::before{content:"✓";color:var(--green);font-weight:700}
+
+/* gallery */
+.gallery{padding:60px 0 90px;background:var(--bg-soft)}
+.gallery h2{font-size:clamp(1.7rem,2.6vw,2.3rem);font-weight:300;margin-bottom:36px;text-align:center}
+.gallery h2 em{font-style:italic;color:var(--green)}
+.gallery-grid{display:grid;grid-template-columns:2fr 1fr 1fr;grid-template-rows:repeat(2,210px);gap:14px}
+.gallery-grid .g{position:relative;overflow:hidden;border-radius:4px;display:flex;align-items:center;justify-content:center}
+.gallery-grid .g span{color:rgba(247,245,238,.85);font-style:italic;font-family:'Fraunces',serif;font-size:.8rem;z-index:1;padding:0 14px;text-align:center}
+.gallery-grid .g::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(19,48,39,.4),transparent 60%)}
+.gallery-grid .g:nth-child(1){grid-row:1/3}
+
+/* amenities band */
+.amen{padding:90px 0}
+.amen-head{text-align:center;margin-bottom:52px}
+.amen-head h2{font-size:clamp(1.7rem,2.6vw,2.3rem);font-weight:300}
+.amen-head h2 em{font-style:italic;color:var(--green)}
+.amen-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px 50px}
+.amen-item{display:flex;gap:16px;align-items:flex-start}
+.amen-item svg{width:24px;height:24px;stroke:var(--green);flex-shrink:0;margin-top:2px}
+.amen-item h4{font-family:'Hanken Grotesk';font-size:.78rem;text-transform:uppercase;letter-spacing:.14em;color:var(--muted);font-weight:600;margin-bottom:4px}
+.amen-item p{font-family:'Fraunces',serif;font-size:1.05rem;color:var(--ink);line-height:1.35}
+
+/* other-stays cross-sell */
+.others{background:var(--green);color:var(--cream);padding:96px 0}
+.others .eyebrow{color:#e0bd77}
+.others h2{color:var(--cream);font-size:clamp(1.7rem,2.7vw,2.4rem);font-weight:300;margin:18px 0 44px;max-width:600px}
+.others h2 em{font-style:italic}
+.others-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.other-card{background:rgba(247,245,238,.06);border:1px solid rgba(247,245,238,.15);border-radius:6px;overflow:hidden;transition:.35s;cursor:pointer}
+.other-card:hover{background:rgba(247,245,238,.11);transform:translateY(-4px)}
+.other-img{height:200px;position:relative;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.other-img span{color:rgba(247,245,238,.78);font-style:italic;font-family:'Fraunces',serif;font-size:.78rem;z-index:1;padding:0 16px;text-align:center}
+.other-img::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(19,48,39,.45),transparent 60%)}
+.other-card-body{padding:20px 22px 24px}
+.other-card-body h3{font-family:'Fraunces',serif;font-size:1.3rem;font-weight:400;color:var(--cream);margin-bottom:6px}
+.other-card-body .meta{font-size:.74rem;letter-spacing:.08em;text-transform:uppercase;color:#e0bd77;font-weight:700}
+.other-card-body p{font-size:.93rem;color:rgba(247,245,238,.7);margin-top:12px;line-height:1.55}
+
+/* tones, accent variants per property */
+.tone-terra{--accent-rich:#a8813a}
+.tone-gold{--accent-rich:#b09556}
+.tone-sage{--accent-rich:#7a8a5c}
+.tone-rust{--accent-rich:#b06a3e}
+
+@media(max-width:980px){
+  .prop-grid{grid-template-columns:1fr;gap:50px}
+  .book-card{position:static}
+  .facts-in{grid-template-columns:repeat(3,1fr);gap:24px 12px}
+  .fact:nth-child(3){border-right:none}
+  .gallery-grid{grid-template-columns:1fr 1fr;grid-template-rows:repeat(3,200px)}
+  .gallery-grid .g:nth-child(1){grid-row:1/2;grid-column:1/3;height:280px}
+  .amen-grid,.others-grid{grid-template-columns:1fr 1fr}
+  .perfect-for ul{grid-template-columns:1fr}
+}
+@media(max-width:640px){
+  .nav-links{display:none}.burger{display:flex}
+  .facts-in{grid-template-columns:repeat(2,1fr)}
+  .fact:nth-child(2){border-right:none}
+  .gallery-grid{grid-template-columns:1fr;grid-template-rows:repeat(4,200px)}
+  .gallery-grid .g:nth-child(1){grid-column:1/2;height:240px}
+  .amen-grid,.others-grid{grid-template-columns:1fr}
+  .foot-top{grid-template-columns:1fr}
+  .wrap{padding:0 22px}
+  .prop-body{padding:60px 0 40px}
+  .gallery,.amen,.others{padding:60px 0}
+}
+
+.view-all-btn{display:inline-flex;align-items:center;gap:10px;background:transparent;color:var(--green);border:1px solid var(--green);padding:14px 30px;border-radius:4px;font-weight:600;font-size:.88rem;letter-spacing:.02em;cursor:pointer;font-family:'Hanken Grotesk',sans-serif;transition:.3s}
+.view-all-btn:hover{background:var(--green);color:var(--cream)}
+.view-all-wrap{text-align:center;margin-top:36px}
+.photo-overlay{position:fixed;inset:0;background:rgba(19,48,39,.97);z-index:9999;display:none;overflow-y:auto;padding:80px 24px 60px}
+.photo-overlay.open{display:block;animation:fade .25s ease-out}
+@keyframes fade{from{opacity:0}to{opacity:1}}
+.lb-close{position:fixed;top:20px;right:24px;background:rgba(247,245,238,.1);border:1px solid rgba(247,245,238,.3);color:#f7f5ee;width:46px;height:46px;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:.25s;z-index:10001}
+.lb-close:hover{background:rgba(247,245,238,.22);transform:rotate(90deg)}
+.lb-title{position:fixed;top:30px;left:24px;color:rgba(247,245,238,.85);font-family:'Fraunces',serif;font-size:1.15rem;z-index:10001}
+.lb-grid{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.lb-photo{aspect-ratio:4/3;border-radius:4px;background-color:#2a3a2e;background-size:cover;background-position:center;cursor:default}
+@media(max-width:780px){.lb-grid{grid-template-columns:repeat(2,1fr);gap:8px}.lb-title{font-size:1rem}}
+@media(max-width:520px){.lb-grid{grid-template-columns:1fr;gap:8px}}
+
+.things{padding:96px 0;background:var(--cream)}
+.things h2{font-family:'Fraunces',serif;font-weight:400;font-size:2.2rem;line-height:1.1;letter-spacing:-.01em;color:var(--green);margin-bottom:56px}
+.things h2 em{font-style:italic;font-weight:400}
+.things-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:54px}
+.thing-card{}
+.thing-icon{color:var(--green);margin-bottom:18px}
+.thing-card h3{font-family:'Hanken Grotesk',sans-serif;font-weight:600;font-size:1.06rem;color:var(--green);margin-bottom:16px;letter-spacing:-.005em}
+.thing-card ul{list-style:none;padding:0;margin:0}
+.thing-card ul li{font-size:.94rem;color:var(--ink);line-height:1.55;margin-bottom:8px}
+.show-more{display:inline-block;margin-top:14px;background:none;border:none;padding:0;color:var(--green);font-family:'Hanken Grotesk',sans-serif;font-size:.92rem;font-weight:600;text-decoration:underline;text-underline-offset:3px;cursor:pointer}
+.show-more:hover{color:var(--ochre)}
+.ttk-modal{position:fixed;inset:0;background:rgba(19,48,39,.96);z-index:9999;display:none;overflow-y:auto;padding:60px 24px}
+.ttk-modal.open{display:block;animation:fade .25s ease-out}
+@keyframes fade{from{opacity:0}to{opacity:1}}
+.ttk-close{position:fixed;top:24px;right:28px;background:rgba(247,245,238,.1);border:1px solid rgba(247,245,238,.3);color:#f7f5ee;width:44px;height:44px;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:.25s;z-index:10001}
+.ttk-close:hover{background:rgba(247,245,238,.22);transform:rotate(90deg)}
+.ttk-body{max-width:680px;margin:0 auto;background:var(--cream);padding:60px 56px;border-radius:6px}
+.ttk-body h3{font-family:'Fraunces',serif;font-weight:400;font-size:1.7rem;color:var(--green);margin-bottom:8px}
+.ttk-body h3 em{font-style:italic}
+.ttk-body .modal-lede{font-size:.96rem;color:#5b665d;margin-bottom:36px}
+.ttk-body .group{margin-bottom:32px}
+.ttk-body .group:last-child{margin-bottom:0}
+.ttk-body .group-label{font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ochre);font-weight:600;margin-bottom:14px;padding-bottom:8px;border-bottom:1px solid var(--line)}
+.ttk-body .group ul{list-style:none;padding:0}
+.ttk-body .group ul li{font-size:.96rem;color:var(--ink);line-height:1.55;margin-bottom:10px;padding-left:18px;position:relative}
+.ttk-body .group ul li::before{content:"";position:absolute;left:0;top:.65em;width:8px;height:1px;background:var(--ochre)}
+@media(max-width:880px){.things-grid{grid-template-columns:1fr;gap:44px}}
+@media(max-width:780px){.things{padding:64px 0}.things h2{font-size:1.7rem;margin-bottom:36px}.ttk-body{padding:40px 28px}}
+</style>
+  <meta name="description" content="A beautifully restored 6-bedroom farmhouse near Cannock Chase, sleeping 12. Three bathrooms plus WC, wood-fired hot tub and sauna, generous living and dining for family gatherings and group getaways.">
+  <meta name="author" content="Kennedy Waters &amp; Woodland">
+  <meta name="theme-color" content="#1c4034">
+  <link rel="canonical" href="https://kennedywatersandwoodland.co.uk/farmhouse.html">
+  <meta property="og:title" content="The Farmhouse — 6-bedroom Staffordshire retreat with hot tub & sauna sleeping 12 | Kennedy Waters & Woodland">
+  <meta property="og:description" content="A beautifully restored 6-bedroom farmhouse near Cannock Chase, sleeping 12. Three bathrooms plus WC, wood-fired hot tub and sauna, generous living and dining for family gatherings and group getaways.">
+  <meta property="og:url" content="https://kennedywatersandwoodland.co.uk/farmhouse.html">
+  <meta property="og:image" content="https://kennedywatersandwoodland.co.uk/photos/farm%20dining%20room%201.jpg">
+  <meta property="og:image:alt" content="The Farmhouse dining room with long table for twelve at Kennedy Waters and Woodland">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Kennedy Waters &amp; Woodland">
+  <meta property="og:locale" content="en_GB">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="The Farmhouse — 6-bedroom Staffordshire retreat with hot tub & sauna sleeping 12 | Kennedy Waters & Woodland">
+  <meta name="twitter:description" content="A beautifully restored 6-bedroom farmhouse near Cannock Chase, sleeping 12. Three bathrooms plus WC, wood-fired hot tub and sauna, generous living and dining for family gatherings and group getaways.">
+  <meta name="twitter:image" content="https://kennedywatersandwoodland.co.uk/photos/farm%20dining%20room%201.jpg">
+  <meta name="geo.region" content="GB-STS">
+  <meta name="geo.placename" content="Blithbury, Staffordshire">
+  <meta name="geo.position" content="52.7958;-1.8794">
+  <meta name="ICBM" content="52.7958, -1.8794">
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "VacationRental",
+  "@id": "https://kennedywatersandwoodland.co.uk/farmhouse.html#vacationrental",
+  "additionalType": "House",
+  "name": "The Farmhouse",
+  "description": "A beautifully restored 6-bedroom farmhouse near Cannock Chase, sleeping 12. Three bathrooms plus WC, wood-fired hot tub and sauna, generous living and dining for family gatherings and group getaways.",
+  "url": "https://kennedywatersandwoodland.co.uk/farmhouse.html",
+  "identifier": {
+    "@type": "PropertyValue",
+    "propertyID": "KennedyWatersAndWoodland-PropertyID",
+    "value": "farmhouse"
+  },
+  "image": [
+    {
+      "@type": "ImageObject",
+      "@id": "https://kennedywatersandwoodland.co.uk/farmhouse.html#img-0",
+      "contentUrl": "https://kennedywatersandwoodland.co.uk/photos/farm%20dining%20room%201.jpg",
+      "url": "https://kennedywatersandwoodland.co.uk/photos/farm%20dining%20room%201.jpg",
+      "caption": "Large dining room with long table for twelve",
+      "creditText": "Kennedy Waters & Woodland",
+      "name": "Large dining room with long table for twelve"
+    },
+    {
+      "@type": "ImageObject",
+      "@id": "https://kennedywatersandwoodland.co.uk/farmhouse.html#img-1",
+      "contentUrl": "https://kennedywatersandwoodland.co.uk/photos/farm%20exterior%20entrance.jpg",
+      "url": "https://kennedywatersandwoodland.co.uk/photos/farm%20exterior%20entrance.jpg",
+      "caption": "Farmhouse exterior",
+      "creditText": "Kennedy Waters & Woodland",
+      "name": "Farmhouse exterior"
+    },
+    {
+      "@type": "ImageObject",
+      "@id": "https://kennedywatersandwoodland.co.uk/farmhouse.html#img-2",
+      "contentUrl": "https://kennedywatersandwoodland.co.uk/photos/farm%20drone%20of%20entrance.jpg",
+      "url": "https://kennedywatersandwoodland.co.uk/photos/farm%20drone%20of%20entrance.jpg",
+      "caption": "Aerial view of the farmhouse",
+      "creditText": "Kennedy Waters & Woodland",
+      "name": "Aerial view of the farmhouse"
+    },
+    {
+      "@type": "ImageObject",
+      "@id": "https://kennedywatersandwoodland.co.uk/farmhouse.html#img-3",
+      "contentUrl": "https://kennedywatersandwoodland.co.uk/photos/farm%20twin%20bed%20room.jpg",
+      "url": "https://kennedywatersandwoodland.co.uk/photos/farm%20twin%20bed%20room.jpg",
+      "caption": "Twin bedroom",
+      "creditText": "Kennedy Waters & Woodland",
+      "name": "Twin bedroom"
+    },
+    {
+      "@type": "ImageObject",
+      "@id": "https://kennedywatersandwoodland.co.uk/farmhouse.html#img-4",
+      "contentUrl": "https://kennedywatersandwoodland.co.uk/photos/farm%20living%20room%201.jpg",
+      "url": "https://kennedywatersandwoodland.co.uk/photos/farm%20living%20room%201.jpg",
+      "caption": "Sitting room with open fire",
+      "creditText": "Kennedy Waters & Woodland",
+      "name": "Sitting room with open fire"
+    },
+    {
+      "@type": "ImageObject",
+      "@id": "https://kennedywatersandwoodland.co.uk/farmhouse.html#img-5",
+      "contentUrl": "https://kennedywatersandwoodland.co.uk/photos/farm%20bedroom%20full%20photo.jpg",
+      "url": "https://kennedywatersandwoodland.co.uk/photos/farm%20bedroom%20full%20photo.jpg",
+      "caption": "Main bedroom",
+      "creditText": "Kennedy Waters & Woodland",
+      "name": "Main bedroom"
+    },
+    {
+      "@type": "ImageObject",
+      "@id": "https://kennedywatersandwoodland.co.uk/farmhouse.html#img-6",
+      "contentUrl": "https://kennedywatersandwoodland.co.uk/photos/farm%20bedroom%205%20full%20photo.jpg",
+      "url": "https://kennedywatersandwoodland.co.uk/photos/farm%20bedroom%205%20full%20photo.jpg",
+      "caption": "Additional bedroom",
+      "creditText": "Kennedy Waters & Woodland",
+      "name": "Additional bedroom"
+    },
+    {
+      "@type": "ImageObject",
+      "@id": "https://kennedywatersandwoodland.co.uk/farmhouse.html#img-7",
+      "contentUrl": "https://kennedywatersandwoodland.co.uk/photos/farm%20sauna%20thermometer.jpg",
+      "url": "https://kennedywatersandwoodland.co.uk/photos/farm%20sauna%20thermometer.jpg",
+      "caption": "Private sauna",
+      "creditText": "Kennedy Waters & Woodland",
+      "name": "Private sauna"
+    },
+    {
+      "@type": "ImageObject",
+      "@id": "https://kennedywatersandwoodland.co.uk/farmhouse.html#img-8",
+      "contentUrl": "https://kennedywatersandwoodland.co.uk/photos/farm%20kitchen%201.jpg",
+      "url": "https://kennedywatersandwoodland.co.uk/photos/farm%20kitchen%201.jpg",
+      "caption": "Fully equipped kitchen",
+      "creditText": "Kennedy Waters & Woodland",
+      "name": "Fully equipped kitchen"
+    },
+    {
+      "@type": "ImageObject",
+      "@id": "https://kennedywatersandwoodland.co.uk/farmhouse.html#img-9",
+      "contentUrl": "https://kennedywatersandwoodland.co.uk/photos/farm%20fireplace%20in%20dining%20room.jpg",
+      "url": "https://kennedywatersandwoodland.co.uk/photos/farm%20fireplace%20in%20dining%20room.jpg",
+      "caption": "Dining room fireplace",
+      "creditText": "Kennedy Waters & Woodland",
+      "name": "Dining room fireplace"
+    },
+    {
+      "@type": "ImageObject",
+      "@id": "https://kennedywatersandwoodland.co.uk/farmhouse.html#img-10",
+      "contentUrl": "https://kennedywatersandwoodland.co.uk/photos/farm%20bathroom.jpg",
+      "url": "https://kennedywatersandwoodland.co.uk/photos/farm%20bathroom.jpg",
+      "caption": "Bathroom",
+      "creditText": "Kennedy Waters & Woodland",
+      "name": "Bathroom"
+    },
+    {
+      "@type": "ImageObject",
+      "@id": "https://kennedywatersandwoodland.co.uk/farmhouse.html#img-11",
+      "contentUrl": "https://kennedywatersandwoodland.co.uk/photos/farm%20staircase.jpg",
+      "url": "https://kennedywatersandwoodland.co.uk/photos/farm%20staircase.jpg",
+      "caption": "Staircase",
+      "creditText": "Kennedy Waters & Woodland",
+      "name": "Staircase"
+    }
+  ],
+  "brand": {
+    "@id": "https://kennedywatersandwoodland.co.uk/#organization"
+  },
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Blithbury",
+    "addressRegion": "Staffordshire",
+    "postalCode": "WS15 3HZ",
+    "addressCountry": "GB"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 52.7958,
+    "longitude": -1.8794
+  },
+  "latitude": 52.7958,
+  "longitude": -1.8794,
+  "containsPlace": [
+    {
+      "@type": "Accommodation",
+      "@id": "https://kennedywatersandwoodland.co.uk/farmhouse.html#accommodation",
+      "additionalType": "House",
+      "name": "The Farmhouse",
+      "description": "A beautifully restored 6-bedroom farmhouse near Cannock Chase, sleeping 12. Three bathrooms plus WC, wood-fired hot tub and sauna, generous living and dining for family gatherings and group getaways.",
+      "amenityFeature": [
+        {
+          "@type": "LocationFeatureSpecification",
+          "name": "Wood-fired hot tub",
+          "value": true
+        },
+        {
+          "@type": "LocationFeatureSpecification",
+          "name": "Sauna",
+          "value": true
+        },
+        {
+          "@type": "LocationFeatureSpecification",
+          "name": "6 bedrooms",
+          "value": true
+        },
+        {
+          "@type": "LocationFeatureSpecification",
+          "name": "3 bathrooms plus separate WC",
+          "value": true
+        },
+        {
+          "@type": "LocationFeatureSpecification",
+          "name": "Large dining space",
+          "value": true
+        },
+        {
+          "@type": "LocationFeatureSpecification",
+          "name": "Fully equipped kitchen",
+          "value": true
+        },
+        {
+          "@type": "LocationFeatureSpecification",
+          "name": "Bed linen and towels provided",
+          "value": true
+        },
+        {
+          "@type": "LocationFeatureSpecification",
+          "name": "Self check-in lockbox",
+          "value": true
+        },
+        {
+          "@type": "LocationFeatureSpecification",
+          "name": "Free parking for 6 cars",
+          "value": true
+        },
+        {
+          "@type": "LocationFeatureSpecification",
+          "name": "Intercom hallway phone to front door",
+          "value": true
+        },
+        {
+          "@type": "LocationFeatureSpecification",
+          "name": "WiFi",
+          "value": true
+        },
+        {
+          "@type": "LocationFeatureSpecification",
+          "name": "TV",
+          "value": true
+        },
+        {
+          "@type": "LocationFeatureSpecification",
+          "name": "Central heating",
+          "value": true
+        },
+        {
+          "@type": "LocationFeatureSpecification",
+          "name": "Bathtub",
+          "value": true
+        },
+        {
+          "@type": "LocationFeatureSpecification",
+          "name": "Drying rack",
+          "value": true
+        },
+        {
+          "@type": "LocationFeatureSpecification",
+          "name": "Designed by Lia Gold (BBC Interior Design Masters)",
+          "value": true
+        }
+      ],
+      "bed": [
+        {
+          "@type": "BedDetails",
+          "typeOfBed": "Single",
+          "numberOfBeds": 12
+        }
+      ],
+      "numberOfBedrooms": 6,
+      "numberOfBathroomsTotal": 3,
+      "numberOfFullBathrooms": 3,
+      "numberOfRooms": 11,
+      "occupancy": {
+        "@type": "QuantitativeValue",
+        "maxValue": 12,
+        "unitText": "person"
+      },
+      "petsAllowed": true,
+      "permittedUsage": "Holiday rental"
+    }
+  ],
+  "containedInPlace": {
+    "@id": "https://kennedywatersandwoodland.co.uk/#lodging"
+  },
+  "numberOfBedrooms": 6,
+  "numberOfBathroomsTotal": 3,
+  "numberOfRooms": 11,
+  "occupancy": {
+    "@type": "QuantitativeValue",
+    "maxValue": 12,
+    "unitText": "person"
+  },
+  "petsAllowed": true,
+  "amenityFeature": [
+    {
+      "@type": "LocationFeatureSpecification",
+      "name": "Wood-fired hot tub",
+      "value": true
+    },
+    {
+      "@type": "LocationFeatureSpecification",
+      "name": "Sauna",
+      "value": true
+    },
+    {
+      "@type": "LocationFeatureSpecification",
+      "name": "6 bedrooms",
+      "value": true
+    },
+    {
+      "@type": "LocationFeatureSpecification",
+      "name": "3 bathrooms plus separate WC",
+      "value": true
+    },
+    {
+      "@type": "LocationFeatureSpecification",
+      "name": "Large dining space",
+      "value": true
+    },
+    {
+      "@type": "LocationFeatureSpecification",
+      "name": "Fully equipped kitchen",
+      "value": true
+    },
+    {
+      "@type": "LocationFeatureSpecification",
+      "name": "Bed linen and towels provided",
+      "value": true
+    },
+    {
+      "@type": "LocationFeatureSpecification",
+      "name": "Self check-in lockbox",
+      "value": true
+    },
+    {
+      "@type": "LocationFeatureSpecification",
+      "name": "Free parking for 6 cars",
+      "value": true
+    },
+    {
+      "@type": "LocationFeatureSpecification",
+      "name": "Intercom hallway phone to front door",
+      "value": true
+    },
+    {
+      "@type": "LocationFeatureSpecification",
+      "name": "WiFi",
+      "value": true
+    },
+    {
+      "@type": "LocationFeatureSpecification",
+      "name": "TV",
+      "value": true
+    },
+    {
+      "@type": "LocationFeatureSpecification",
+      "name": "Central heating",
+      "value": true
+    },
+    {
+      "@type": "LocationFeatureSpecification",
+      "name": "Bathtub",
+      "value": true
+    },
+    {
+      "@type": "LocationFeatureSpecification",
+      "name": "Drying rack",
+      "value": true
+    },
+    {
+      "@type": "LocationFeatureSpecification",
+      "name": "Designed by Lia Gold (BBC Interior Design Masters)",
+      "value": true
+    }
+  ],
+  "checkinTime": "15:00",
+  "checkoutTime": "10:00"
+}
+</script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How many people does The Farmhouse sleep?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The Farmhouse sleeps up to 12 guests across six bedrooms, ideal for family gatherings and group getaways."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How many bedrooms and bathrooms does The Farmhouse have?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Six bedrooms, three bathrooms, plus a separate WC."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is there a hot tub at The Farmhouse?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, a wood-fired hot tub. In winter it can take up to 6 hours to heat."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is there a sauna at The Farmhouse?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, a private sauna for guests' use with countryside views."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are pets allowed at The Farmhouse?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, pets are welcome with a pet fee per stay covering extra cleaning."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How many cars can park at The Farmhouse?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Free on-site parking for up to 6 cars, with further parking next to the barns on the gravel."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Who designed The Farmhouse?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The Farmhouse was designed by Lia Gold of the BBC's Interior Design Masters with Alan Carr."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What time is check-in and check-out at The Farmhouse?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Check-in is after 3pm via a secure self check-in lockbox. Check-out is before 10am."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How far is The Farmhouse from Cannock Chase?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The Farmhouse is near Cannock Chase in Blithbury, Staffordshire — close enough for walking, cycling, and exploring nearby villages."
+      }
+    }
+  ]
+}
+</script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": "https://kennedywatersandwoodland.co.uk/farmhouse.html#webpage",
+  "url": "https://kennedywatersandwoodland.co.uk/farmhouse.html",
+  "name": "The Farmhouse — 6-bedroom Staffordshire retreat with hot tub & sauna sleeping 12 | Kennedy Waters & Woodland",
+  "description": "A beautifully restored 6-bedroom farmhouse near Cannock Chase, sleeping 12. Three bathrooms plus WC, wood-fired hot tub and sauna, generous living and dining for family gatherings and group getaways.",
+  "isPartOf": {
+    "@id": "https://kennedywatersandwoodland.co.uk/#website"
+  },
+  "inLanguage": "en-GB",
+  "speakable": {
+    "@type": "SpeakableSpecification",
+    "cssSelector": [
+      "h1",
+      ".lede",
+      ".drop"
+    ]
+  }
+}
+</script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://kennedywatersandwoodland.co.uk/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "The Farmhouse",
+      "item": "https://kennedywatersandwoodland.co.uk/farmhouse.html"
+    }
+  ]
+}
+</script>
+</head>
+<body class="tone-rust">
+
+<nav id="nav" class="solid">
+  <div class="wrap nav-in">
+    <a href="index.html" class="logo"><b>Kennedy Waters &amp; Woodland</b></a>
+    <div class="nav-links">
+      <a href="index.html#properties">Properties</a>
+      <a href="fishing.html">Fishing</a>
+      <a href="area.html">The Area</a>
+      <a href="about.html">About</a>
+      <a href="contact.html" class="nav-cta">Enquire</a>
+    </div>
+    <div class="burger"><span></span><span></span><span></span></div>
+  </div>
+</nav>
+
+<header class="prop-hero" style="background-image:url('photos/farm%20dining%20room%201.jpg');background-size:cover;background-position:center" role="img" aria-label="The Farmhouse dining room with long table for twelve at Kennedy Waters and Woodland">
+  <div class="wrap prop-hero-content">
+    <div class="eyebrow reveal">Blithbury, Staffordshire &middot; Sleeps 12</div>
+    <h1 class="reveal d1">Farmhouse<br><em style="font-size:.6em;display:inline-block;margin-top:14px;font-weight:300">Six bedrooms, a wood-fired hot tub, a long table for twelve.</em></h1>
+  </div>
+</header>
+
+<section class="facts"><div class="wrap"><div class="facts-in"><div class="fact"><div class="fact-label">Sleeps</div><div class="fact-value">12</div></div><div class="fact"><div class="fact-label">Bedrooms</div><div class="fact-value">6</div></div><div class="fact"><div class="fact-label">Bathrooms</div><div class="fact-value">3 + WC</div></div><div class="fact"><div class="fact-label">Hot tub</div><div class="fact-value">Wood-fired</div></div><div class="fact"><div class="fact-label">Sauna</div><div class="fact-value">Yes</div></div></div></div></section>
+
+<section class="prop-body">
+  <div class="wrap">
+    <div class="prop-grid">
+      <div class="prop-main reveal">
+        <h2>Bring twelve. Light the tub. <em>Stay for the sunset.</em></h2>
+        <p>The Farmhouse is the largest of the four, six bedrooms, three bathrooms, an unhurried kitchen, and a sitting room with a fire that's been lit longer than any of us. Restored room by room and finished beautifully, it's quietly one of the most considered places to take a houseful of people in the Midlands.</p>
+          <p>There's a wood-fired hot tub and a private sauna for guests to use. The long dining table seats twelve. Six bedrooms across the farmhouse comfortably sleep groups of family or friends, with three bathrooms plus a separate WC.</p>
+          <p>Bring twelve. Light the tub. Stay for the sunset.</p>
+        <div class="perfect-for">
+          <h3>Perfect for</h3>
+          <ul>
+            <li>Big family weekends</li>
+            <li>Big birthdays</li>
+            <li>Quiet weddings (paired with The Cottage)</li>
+            <li>Working retreats</li>
+          </ul>
+        </div>
+      </div>
+      <aside class="book-card reveal d1" style="position:static">
+        <div class="booking-widget" style="margin:24px 0 8px;border-radius:4px;overflow:hidden;background:#fff">
+    <iframe 
+      src="https://booking.hospitable.com/widget/a1edcf41-d0f4-4797-bca8-2283a2ca37ac/1991274"
+      style="width:100%;height:780px;border:none;display:block;background:transparent"
+      sandbox="allow-top-navigation allow-scripts allow-same-origin allow-forms allow-popups"
+      title="Booking calendar">
+    </iframe>
+  </div>
+        <a href="contact.html" class="btn">Enquire about dates
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <ul class="book-mini-list">
+          <li>Direct booking, no platform fees</li>
+          <li>Same-day replies, real people</li>
+          <li>Secure payments via Stripe</li>
+        </ul>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<section class="gallery">
+  <div class="wrap">
+    <h2 class="reveal">A look <em>inside.</em></h2>
+    <div class="gallery-grid reveal d1"><div class="g" style="background-image:url('photos/farm%20twin%20bed%20room.jpg');background-size:cover;background-position:center"></div><div class="g" style="background-image:url('photos/farm%20living%20room%201.jpg');background-size:cover;background-position:center"></div><div class="g" style="background-image:url('photos/farm%20bedroom%20full%20photo.jpg');background-size:cover;background-position:center"></div><div class="g" style="background-image:url('photos/farm%20bedroom%205%20full%20photo.jpg');background-size:cover;background-position:center"></div><div class="g" style="background-image:url('photos/farm%20sauna%20thermometer.jpg');background-size:cover;background-position:center"></div></div><div class="view-all-wrap">
+        <button class="view-all-btn" onclick="openGallery()">View all photos
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+        </button>
+      </div>
+  </div>
+</section>
+
+<section class="amen">
+  <div class="wrap">
+    <div class="amen-head reveal"><span class="eyebrow">What you get</span><h2 style="margin-top:14px">Everything you need, <em>nothing in the way.</em></h2></div>
+    <div class="amen-grid"><div class="amen-item reveal d1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg><div><h4>Bedrooms</h4><p>Six, mix of king, double, twin</p></div></div><div class="amen-item reveal d1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg><div><h4>Bathrooms</h4><p>3 full + downstairs WC</p></div></div><div class="amen-item reveal d1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg><div><h4>Hot tub</h4><p>Wood-fired, year round</p></div></div><div class="amen-item reveal d1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg><div><h4>Sauna</h4><p>Wood-fired, private</p></div></div><div class="amen-item reveal d1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg><div><h4>Kitchen</h4><p>Large, fully equipped, oak table for 12</p></div></div><div class="amen-item reveal d1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg><div><h4>Sitting rooms</h4><p>Two, one with open fire</p></div></div><div class="amen-item reveal d1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg><div><h4>Pets</h4><p>One dog, in the Potting Shed</p></div></div><div class="amen-item reveal d1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg><div><h4>Parking</h4><p>6 cars on the gravel</p></div></div><div class="amen-item reveal d1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg><div><h4>Wifi</h4><p>Yes, throughout</p></div></div></div>
+  </div>
+</section>
+
+<section class="things">
+  <div class="wrap">
+    <h2>Things <em>to know.</em></h2>
+    <div class="things-grid">
+      <div class="thing-card reveal">
+        <svg class="thing-icon" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="15" r="4"/><path d="M10.85 12.15 19 4"/><path d="M18 5l2 2"/><path d="M15 8l3 3"/></svg>
+        <h3>House rules</h3>
+        <ul><li>Check-in after 3pm</li><li>Check-out before 10am</li><li>12 guests maximum</li><li>No parties or events</li></ul>
+        <button class="show-more" onclick="openTTK('rules')">Show more</button>
+      </div><div class="thing-card reveal">
+        <svg class="thing-icon" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        <h3>Safety &amp; property</h3>
+        <ul><li>Unfenced fishing lake nearby</li><li>Working farm with grazing animals</li><li>Wood-fired hot tub (6hr winter heat-up)</li><li>Smoke and CO alarms</li></ul>
+        <button class="show-more" onclick="openTTK('safety')">Show more</button>
+      </div><div class="thing-card reveal">
+        <svg class="thing-icon" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
+        <h3>Good to know</h3>
+        <ul><li>Self check-in via secure lockbox</li><li>Pets welcome (fee per stay)</li><li>Hot tub and sauna included</li><li>Free parking for up to 6 cars</li></ul>
+        <button class="show-more" onclick="openTTK('good')">Show more</button>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="others">
+  <div class="wrap">
+    <span class="eyebrow reveal">The other three stays</span>
+    <h2 class="reveal d1">Or take a look at the <em>others.</em></h2>
+    <div class="others-grid"><a href="reindeer-lodge.html" class="other-card reveal d1">
+      <div class="other-img img-reindeerlodge" style="background-image:url('photos/reindeer%20sunset%20view.jpg');background-size:cover;background-position:center"></div>
+      <div class="other-card-body">
+        <h3>The Reindeer Lodge</h3>
+        <div class="meta">Sleeps 6 &middot; Hot tub</div>
+        <p>A timber lodge on the farm with its own wood-fired hot tub on covered decking.</p>
+      </div>
+    </a><a href="cottage.html" class="other-card reveal d1">
+      <div class="other-img img-cottage" style="background-image:url('photos/cottage%20living%203.avif');background-size:cover;background-position:center"></div>
+      <div class="other-card-body">
+        <h3>The Cottage</h3>
+        <div class="meta">Sleeps 6 &middot; Pet-friendly</div>
+        <p>A two-bedroom cottage on the lane, with a stove and a view of the orchard.</p>
+      </div>
+    </a><a href="the-den.html" class="other-card reveal d1">
+      <div class="other-img img-den" style="background-image:url('photos/den%20living%20room%201.avif');background-size:cover;background-position:center"></div>
+      <div class="other-card-body">
+        <h3>The Den</h3>
+        <div class="meta">Sleeps 3 &middot; Loft den</div>
+        <p>A snug one-bedroom hideaway with a roll-top bath and a view of the field.</p>
+      </div>
+    </a></div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-top">
+      <div class="foot-brand">
+        <span class="logo"><b>Kennedy Waters &amp; Woodland</b></span>
+        <p>Four countryside escapes with hot tubs, fishing lakes and room to breathe. Blithbury, Staffordshire.</p>
+      </div>
+      <div>
+        <h5>Stays</h5>
+        <ul>
+          <li><a href="reindeer-lodge.html">The Reindeer Lodge</a></li>
+          <li><a href="cottage.html">The Cottage</a></li>
+          <li><a href="the-den.html">The Den</a></li>
+          <li><a href="farmhouse.html">The Farmhouse</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Get in touch</h5>
+        <ul>
+          <li><a href="mailto:info@kennedywatersandwoodland.co.uk">info@kennedywatersandwoodland.co.uk</a></li>
+          <li><a href="fishing.html">Fishing</a></li>
+          <li><a href="area.html">The Area</a></li>
+          <li><a href="about.html">About us</a></li>
+          <li><a href="contact.html">Enquire</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>&copy; 2026 Kennedy Waters and Woodland</span>
+      <span>Privacy &middot; Terms &middot; Bookings handled securely</span>
+    </div>
+  </div>
+</footer>
+
+<script>/* Shared site behaviours, nav scroll state + reveal animations + mobile menu */
+(function(){
+  const nav=document.getElementById('nav');
+  if(nav && !nav.classList.contains('solid')){
+    addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>40),{passive:true});
+  }
+  const io=new IntersectionObserver((es)=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('in')}),{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+  addEventListener('load',()=>document.querySelectorAll('.hero .reveal, .prop-hero .reveal').forEach(el=>el.classList.add('in')));
+})();
+</script>
+<div id="photo-overlay" class="photo-overlay" onclick="if(event.target===this)closeGallery()">
+  <div class="lb-title">The Farmhouse, 30 photos</div>
+  <button class="lb-close" onclick="closeGallery()" aria-label="Close gallery">
+    <svg viewBox="0 0 24 24" width="22" height="22" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"><path d="M6 6l12 12M18 6l-12 12"/></svg>
+  </button>
+  <div class="lb-grid">
+    <div class="lb-photo" style="background-image:url('photos/farm%20dining%20room%201.jpg')"></div>
+    <div class="lb-photo" style="background-image:url('photos/farm%20twin%20bed%20room.jpg')"></div>
+    <div class="lb-photo" style="background-image:url('photos/farm%20living%20room%201.jpg')"></div>
+    <div class="lb-photo" style="background-image:url('photos/farm%20bedroom%20full%20photo.jpg')"></div>
+    <div class="lb-photo" style="background-image:url('photos/farm%20bedroom%205%20full%20photo.jpg')"></div>
+    <div class="lb-photo" style="background-image:url('photos/farm%20sauna%20thermometer.jpg')"></div>
+    <div class="lb-photo" style="background-image:url('photos/farm%20exterior%20entrance.jpg')"></div>
+    <div class="lb-photo" style="background-image:url('photos/farm%20drone%20of%20entrance.jpg')"></div>
+    <div class="lb-photo" style="background-image:url('photos/farm%20nice%20signage.jpg')"></div>
+    <div class="lb-photo" style="background-image:url('photos/farm%20dining%20room%202.jpg')"></div>
+    <div class="lb-photo" style="background-image:url('photos/farm%20fireplace%20in%20dining%20room.jpg')"></div>
+    <div class="lb-photo" style="background-image:url('photos/farm%20kitchen%201.jpg')"></div>
+    <div class="lb-photo" style="background-image:url('photos/farm%20sink%20and%20fridge.jpg')"></div>
+    <div class="lb-photo" style="background-image:url('photos/farm%20alternative%20kitchen%20view.jpg')"></div>
+    <div class="lb-photo" style="background-image:url('photos/farm%20utility%20room.jpg')"></div>
+    <div class="lb-photo" style="background-image:url('photos/farm%20bedroom%202%20full%20photo.jpg')"></div>
+    <div class="lb-photo" style="background-image:url('photos/farm%20bedroom%203%20full%20photo.jpg')"></div>
+    <div class="lb-photo" style="background-image:url('photos/farm%20bedroom%204%20full%20photo.jpg')"></div>
+    <div class="lb-photo" style="background-image:url('photos/farm%20bed%201.jpg')"></div>
+    <div class="lb-photo" style="background-image:url('photos/farm%20bed%202.jpg')"></div>
+    <div class="lb-photo" style="background-image:url('photos/farm%20bed%203.jpg')"></div>
+    <div class="lb-photo" style="background-image:url('photos/farm%20bed%20decor.jpg')"></div>
+    <div class="lb-photo" style="background-image:url('photos/farm%20bed%20decor%202.jpg')"></div>
+    <div class="lb-photo" style="background-image:url('photos/farm%20bedroom%20decor%203.jpg')"></div>
+    <div class="lb-photo" style="background-image:url('photos/farm%20staircase.jpg')"></div>
+    <div class="lb-photo" style="background-image:url('photos/farm%20staircase%20and%20ground%20floor.jpg')"></div>
+    <div class="lb-photo" style="background-image:url('photos/farm%20bathroom.jpg')"></div>
+    <div class="lb-photo" style="background-image:url('photos/farm%20side%20by%20side%20shower.jpg')"></div>
+    <div class="lb-photo" style="background-image:url('photos/farm%20toilet.jpg')"></div>
+    <div class="lb-photo" style="background-image:url('photos/farm%20sauna%20decor.jpg')"></div>
+  </div>
+</div>
+<script>
+function openGallery(){document.getElementById('photo-overlay').classList.add('open');document.body.style.overflow='hidden'}
+function closeGallery(){document.getElementById('photo-overlay').classList.remove('open');document.body.style.overflow=''}
+document.addEventListener('keydown',function(e){if(e.key==='Escape')closeGallery()});
+</script>
+<div id="ttk-rules" class="ttk-modal" onclick="if(event.target===this)closeTTK()">
+  <button class="ttk-close" onclick="closeTTK()" aria-label="Close"><svg viewBox="0 0 24 24" width="22" height="22" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"><path d="M6 6l12 12M18 6l-12 12"/></svg></button>
+  <div class="ttk-body">
+    <h3>House <em>rules.</em></h3>
+    <p class="modal-lede">The essentials to keep things a pleasure for everyone who stays.</p>
+    <div class="group"><div class="group-label">Times and capacity</div><ul>
+      <li>Check-in after 3pm</li>
+      <li>Check-out before 10am</li>
+      <li>12 guests maximum. Only guests on the booking may stay overnight.</li>
+    </ul></div>
+    <div class="group"><div class="group-label">During your stay</div><ul>
+      <li>No parties or events</li>
+      <li>Quiet hours after 10pm</li>
+      <li>No smoking or vaping indoors. Outside is fine.</li>
+      <li>Remove outdoor shoes at the door</li>
+    </ul></div>
+    <div class="group"><div class="group-label">On departure</div><ul>
+      <li>Strip the beds and leave linens in one place</li>
+      <li>Put used towels in the bath or shower</li>
+      <li>Wash any dishes you've used</li>
+      <li>Dispose of rubbish in the right bins</li>
+      <li>If anything's broken or not working, just message us. No judgement.</li>
+    </ul></div>
+  </div>
+</div><div id="ttk-safety" class="ttk-modal" onclick="if(event.target===this)closeTTK()">
+  <button class="ttk-close" onclick="closeTTK()" aria-label="Close"><svg viewBox="0 0 24 24" width="22" height="22" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"><path d="M6 6l12 12M18 6l-12 12"/></svg></button>
+  <div class="ttk-body">
+    <h3>Safety <em>and property.</em></h3>
+    <p class="modal-lede">A few things about the setting that are worth knowing before you arrive.</p>
+    <div class="group"><div class="group-label">The setting</div><ul>
+      <li>The Farmhouse sits on a working farm. Animals graze freely in the surrounding fields, so please don't feed or touch them.</li>
+      <li>There's a large fishing lake nearby that isn't fenced. Be mindful when walking through the fields, especially with small children.</li>
+      <li>Wear appropriate footwear. Fields and lanes can be muddy in any season.</li>
+    </ul></div>
+    <div class="group"><div class="group-label">The hot tub</div><ul>
+      <li>Wood-fired, on covered decking, and yours alone.</li>
+      <li>In winter it can take up to 6 hours to heat. Keep the lid on while heating and feed the fire every 20 minutes.</li>
+    </ul></div>
+    <div class="group"><div class="group-label">Safety equipment</div><ul>
+      <li>Smoke alarms throughout</li>
+      <li>Carbon monoxide alarm</li>
+      <li>Fire extinguisher</li>
+    </ul></div>
+  </div>
+</div><div id="ttk-good" class="ttk-modal" onclick="if(event.target===this)closeTTK()">
+  <button class="ttk-close" onclick="closeTTK()" aria-label="Close"><svg viewBox="0 0 24 24" width="22" height="22" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"><path d="M6 6l12 12M18 6l-12 12"/></svg></button>
+  <div class="ttk-body">
+    <h3>Good <em>to know.</em></h3>
+    <p class="modal-lede">Practical bits to help your stay run smoothly.</p>
+    <div class="group"><div class="group-label">What we leave you</div><ul>
+      <li>Toilet rolls, washing-up liquid, dish sponge and cleaning cloth</li>
+      <li>Dishwasher tablets and laundry tablets</li>
+      <li>Tea and coffee-making facilities ready for arrival</li>
+      <li>Bed linens, towels, hair dryer and iron all provided</li>
+    </ul></div>
+    <div class="group"><div class="group-label">Logs and fuel</div><ul>
+      <li>We provide enough logs for one hot tub session and one log burner session.</li>
+      <li>Top-ups are available at the Esso garage, about 10 minutes' drive away.</li>
+    </ul></div>
+    <div class="group"><div class="group-label">Pets</div><ul>
+      <li>Pets are welcome with a pet fee per stay (covers extra cleaning).</li>
+      <li>Please keep dogs off beds and furniture.</li>
+      <li>Please clean up after them and ensure they're well-behaved and house-trained.</li>
+    </ul></div>
+    
+    <div class="group"><div class="group-label">Arrival and access</div><ul>
+      <li>Self check-in via a secure lockbox. Arrive on your own schedule, no key handover required.</li>
+      <li>Full private access to the entire property for your stay.</li>
+      <li>Free on-site parking for up to 6 cars. Further parking next to the barns on the gravel.</li>
+      <li>After booking you'll receive a secure portal link with the lockbox code, check-in details, and local recommendations.</li>
+      <li>Early or late check-in can sometimes be arranged. Just ask when you book.</li>
+    </ul></div>
+  </div>
+</div>
+<script>
+function openTTK(which){document.getElementById('ttk-'+which).classList.add('open');document.body.style.overflow='hidden'}
+function closeTTK(){document.querySelectorAll('.ttk-modal.open').forEach(function(m){m.classList.remove('open')});if(!document.querySelector('.photo-overlay.open'))document.body.style.overflow=''}
+document.addEventListener('keydown',function(e){if(e.key==='Escape')closeTTK()});
+</script>
+</body>
+</html>

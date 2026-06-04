@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kennedy Waters & Woodland — Four farm cottages in Staffordshire near Cannock Chase</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..600&family=Hanken+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>/* Kennedy Waters & Woodland, shared site styles */
+:root{
+  --green:#1c4034;
+  --green-deep:#133027;
+  --green-mid:#2f5447;
+  --bg:#f7f5ee;
+  --bg-soft:#eee9db;
+  --ochre:#a8813a;
+  --ink:#23271f;
+  --muted:#5e6356;
+  --line:#ddd6c4;
+  --cream:#f7f5ee;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Hanken Grotesk',sans-serif;background:var(--bg);color:var(--ink);font-weight:400;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+h1,h2,h3,.display{font-family:'Fraunces',serif;font-weight:400;line-height:1.1;letter-spacing:-.01em}
+.eyebrow{font-size:.72rem;letter-spacing:.26em;text-transform:uppercase;font-weight:700;color:var(--ochre)}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1200px;margin:0 auto;padding:0 36px}
+.btn{display:inline-flex;align-items:center;gap:11px;background:var(--green);color:var(--cream);padding:15px 32px;border-radius:4px;font-weight:600;font-size:.9rem;letter-spacing:.01em;transition:.3s;border:none;cursor:pointer}
+.btn:hover{background:var(--green-deep);transform:translateY(-1px)}
+.btn svg{transition:.3s}.btn:hover svg{transform:translateX(4px)}
+.btn-light{background:var(--cream);color:var(--green)}
+.btn-light:hover{background:#fff}
+.btn-ghost{background:transparent;color:var(--green);border:1px solid var(--green)}
+.btn-ghost:hover{background:var(--green);color:var(--cream)}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:1000;padding:20px 0;transition:.4s}
+nav.scrolled,nav.solid{background:rgba(247,245,238,.95);backdrop-filter:blur(10px);box-shadow:0 1px 0 var(--line);padding:13px 0}
+.nav-in{display:flex;align-items:center;justify-content:space-between}
+.logo{font-family:'Fraunces',serif;font-size:1.16rem;letter-spacing:.01em;color:var(--cream);transition:.4s}
+.logo b{font-weight:600}
+nav.scrolled .logo,nav.solid .logo{color:var(--green)}
+.nav-links{display:flex;gap:32px;align-items:center}
+.nav-links a{font-size:.85rem;font-weight:600;letter-spacing:.01em;color:rgba(247,245,238,.95);transition:.3s}
+nav.scrolled .nav-links a,nav.solid .nav-links a{color:var(--ink)}
+.nav-links a:hover{color:var(--ochre)}
+.nav-cta{background:rgba(247,245,238,.15);border:1px solid rgba(247,245,238,.55);padding:8px 18px;border-radius:4px}
+nav.scrolled .nav-cta,nav.solid .nav-cta{background:var(--green);border-color:var(--green);color:var(--cream)!important}
+.nav-cta:hover{background:var(--cream)!important;border-color:var(--cream)!important;color:var(--green)!important}
+.burger{display:none;flex-direction:column;gap:5px;cursor:pointer}
+.burger span{width:24px;height:2px;background:var(--cream)}
+nav.scrolled .burger span,nav.solid .burger span{background:var(--green)}
+
+/* FOOTER */
+footer{background:var(--green-deep);color:rgba(247,245,238,.8);padding:78px 0 34px;margin-top:80px}
+.foot-top{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:42px;padding-bottom:48px;border-bottom:1px solid rgba(247,245,238,.13)}
+.foot-brand .logo{color:var(--cream);font-size:1.36rem;display:block;margin-bottom:15px}
+.foot-brand p{font-size:.94rem;max-width:300px;color:rgba(247,245,238,.6)}
+footer h5{font-family:'Hanken Grotesk';text-transform:uppercase;letter-spacing:.16em;font-size:.7rem;color:#e0bd77;margin-bottom:18px;font-weight:700}
+footer ul{list-style:none}
+footer li{margin-bottom:11px;font-size:.94rem}
+footer li a:hover{color:#e0bd77}
+.foot-bottom{padding-top:26px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:14px;font-size:.8rem;color:rgba(247,245,238,.45)}
+
+.reveal{opacity:0;transform:translateY(26px);transition:1s cubic-bezier(.2,.7,.3,1)}
+.reveal.in{opacity:1;transform:none}
+.d1{transition-delay:.12s}.d2{transition-delay:.24s}.d3{transition-delay:.36s}.d4{transition-delay:.48s}
+
+/* ============= PROPERTY PAGE ============= */
+.prop-hero{position:relative;min-height:78vh;display:flex;align-items:flex-end;overflow:hidden;background:#3c4a3b}
+.prop-hero::after{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(to top,rgba(19,48,39,.85),rgba(19,48,39,.15) 50%,rgba(19,48,39,.1) 80%)}
+.prop-hero-scene{position:absolute;inset:0;width:100%;height:100%;z-index:0}
+.prop-hero-content{position:relative;z-index:2;padding-bottom:8vh;max-width:780px}
+.prop-hero .eyebrow{color:#e0bd77}
+.prop-hero h1{color:var(--cream);font-size:clamp(2.6rem,6vw,5rem);font-weight:300;margin-top:18px}
+.prop-hero h1 em{font-style:italic;font-weight:400}
+.prop-hero .lede{color:rgba(247,245,238,.92);font-size:clamp(1rem,1.4vw,1.22rem);margin-top:22px;max-width:600px;font-weight:300}
+
+/* facts bar */
+.facts{background:#fff;border-bottom:1px solid var(--line)}
+.facts-in{display:grid;grid-template-columns:repeat(6,1fr);gap:20px;padding:32px 0}
+.fact{padding:0 12px;border-right:1px solid var(--line)}
+.fact:last-child{border-right:none}
+.fact-label{font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);font-weight:600;margin-bottom:6px}
+.fact-value{font-family:'Fraunces',serif;font-size:1.08rem;color:var(--ink);line-height:1.3}
+
+/* main layout */
+.prop-body{padding:96px 0 60px}
+.prop-grid{display:grid;grid-template-columns:1.4fr .9fr;gap:80px;align-items:start}
+.prop-main h2{font-size:clamp(1.7rem,2.6vw,2.4rem);font-weight:300;margin-bottom:22px}
+.prop-main h2 em{font-style:italic;color:var(--green)}
+.prop-main p{color:var(--ink);font-size:1.06rem;margin-bottom:18px;line-height:1.75}
+.prop-main p:first-of-type::first-letter{font-family:'Fraunces',serif;font-size:3.2rem;float:left;line-height:.92;padding:6px 12px 0 0;color:var(--green);font-weight:400}
+.perfect-for{margin-top:38px;padding-top:32px;border-top:1px solid var(--line)}
+.perfect-for h3{font-family:'Fraunces',serif;font-size:1.3rem;font-weight:400;margin-bottom:18px}
+.perfect-for ul{list-style:none;display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.perfect-for li{font-size:.97rem;color:var(--muted);display:flex;align-items:center;gap:10px}
+.perfect-for li::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--ochre);flex-shrink:0}
+
+/* booking card sidebar */
+.book-card{background:#fff;border:1px solid var(--line);border-radius:6px;padding:32px;position:sticky;top:100px;box-shadow:0 18px 36px -28px rgba(19,48,39,.35)}
+.book-card .from{color:var(--muted);font-size:.84rem;letter-spacing:.05em;text-transform:uppercase;font-weight:600;margin-bottom:6px}
+.book-card .price{font-family:'Fraunces',serif;font-size:2.4rem;font-weight:400;color:var(--green);line-height:1}
+.book-card .price small{font-family:'Hanken Grotesk';font-size:.92rem;color:var(--muted);font-weight:500;margin-left:6px}
+.book-placeholder{margin:28px 0;padding:28px 22px;background:var(--bg);border:1px dashed var(--line);border-radius:6px;text-align:center}
+.book-placeholder svg{width:30px;height:30px;stroke:var(--ochre);margin-bottom:12px}
+.book-placeholder h4{font-family:'Fraunces',serif;font-size:1.08rem;font-weight:500;margin-bottom:6px;color:var(--green)}
+.book-placeholder p{font-size:.86rem;color:var(--muted);line-height:1.5}
+.book-card .btn{width:100%;justify-content:center;margin-top:8px}
+.book-mini-list{margin-top:26px;padding-top:24px;border-top:1px solid var(--line);font-size:.86rem;color:var(--muted)}
+.book-mini-list li{list-style:none;display:flex;align-items:center;gap:9px;padding:5px 0}
+.book-mini-list li::before{content:"✓";color:var(--green);font-weight:700}
+
+/* gallery */
+.gallery{padding:60px 0 90px;background:var(--bg-soft)}
+.gallery h2{font-size:clamp(1.7rem,2.6vw,2.3rem);font-weight:300;margin-bottom:36px;text-align:center}
+.gallery h2 em{font-style:italic;color:var(--green)}
+.gallery-grid{display:grid;grid-template-columns:2fr 1fr 1fr;grid-template-rows:repeat(2,210px);gap:14px}
+.gallery-grid .g{position:relative;overflow:hidden;border-radius:4px;display:flex;align-items:center;justify-content:center}
+.gallery-grid .g span{color:rgba(247,245,238,.85);font-style:italic;font-family:'Fraunces',serif;font-size:.8rem;z-index:1;padding:0 14px;text-align:center}
+.gallery-grid .g::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(19,48,39,.4),transparent 60%)}
+.gallery-grid .g:nth-child(1){grid-row:1/3}
+
+/* amenities band */
+.amen{padding:90px 0}
+.amen-head{text-align:center;margin-bottom:52px}
+.amen-head h2{font-size:clamp(1.7rem,2.6vw,2.3rem);font-weight:300}
+.amen-head h2 em{font-style:italic;color:var(--green)}
+.amen-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px 50px}
+.amen-item{display:flex;gap:16px;align-items:flex-start}
+.amen-item svg{width:24px;height:24px;stroke:var(--green);flex-shrink:0;margin-top:2px}
+.amen-item h4{font-family:'Hanken Grotesk';font-size:.78rem;text-transform:uppercase;letter-spacing:.14em;color:var(--muted);font-weight:600;margin-bottom:4px}
+.amen-item p{font-family:'Fraunces',serif;font-size:1.05rem;color:var(--ink);line-height:1.35}
+
+/* other-stays cross-sell */
+.others{background:var(--green);color:var(--cream);padding:96px 0}
+.others .eyebrow{color:#e0bd77}
+.others h2{color:var(--cream);font-size:clamp(1.7rem,2.7vw,2.4rem);font-weight:300;margin:18px 0 44px;max-width:600px}
+.others h2 em{font-style:italic}
+.others-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.other-card{background:rgba(247,245,238,.06);border:1px solid rgba(247,245,238,.15);border-radius:6px;overflow:hidden;transition:.35s;cursor:pointer}
+.other-card:hover{background:rgba(247,245,238,.11);transform:translateY(-4px)}
+.other-img{height:200px;position:relative;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.other-img span{color:rgba(247,245,238,.78);font-style:italic;font-family:'Fraunces',serif;font-size:.78rem;z-index:1;padding:0 16px;text-align:center}
+.other-img::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(19,48,39,.45),transparent 60%)}
+.other-card-body{padding:20px 22px 24px}
+.other-card-body h3{font-family:'Fraunces',serif;font-size:1.3rem;font-weight:400;color:var(--cream);margin-bottom:6px}
+.other-card-body .meta{font-size:.74rem;letter-spacing:.08em;text-transform:uppercase;color:#e0bd77;font-weight:700}
+.other-card-body p{font-size:.93rem;color:rgba(247,245,238,.7);margin-top:12px;line-height:1.55}
+
+/* tones, accent variants per property */
+.tone-terra{--accent-rich:#a8813a}
+.tone-gold{--accent-rich:#b09556}
+.tone-sage{--accent-rich:#7a8a5c}
+.tone-rust{--accent-rich:#b06a3e}
+
+@media(max-width:980px){
+  .prop-grid{grid-template-columns:1fr;gap:50px}
+  .book-card{position:static}
+  .facts-in{grid-template-columns:repeat(3,1fr);gap:24px 12px}
+  .fact:nth-child(3){border-right:none}
+  .gallery-grid{grid-template-columns:1fr 1fr;grid-template-rows:repeat(3,200px)}
+  .gallery-grid .g:nth-child(1){grid-row:1/2;grid-column:1/3;height:280px}
+  .amen-grid,.others-grid{grid-template-columns:1fr 1fr}
+  .perfect-for ul{grid-template-columns:1fr}
+}
+@media(max-width:640px){
+  .nav-links{display:none}.burger{display:flex}
+  .facts-in{grid-template-columns:repeat(2,1fr)}
+  .fact:nth-child(2){border-right:none}
+  .gallery-grid{grid-template-columns:1fr;grid-template-rows:repeat(4,200px)}
+  .gallery-grid .g:nth-child(1){grid-column:1/2;height:240px}
+  .amen-grid,.others-grid{grid-template-columns:1fr}
+  .foot-top{grid-template-columns:1fr}
+  .wrap{padding:0 22px}
+  .prop-body{padding:60px 0 40px}
+  .gallery,.amen,.others{padding:60px 0}
+}
+</style>
+<style>
+  /* Homepage-only styles */
+  .hero{position:relative;min-height:100vh;display:flex;align-items:flex-end;overflow:hidden;background:#3c4a3b}
+  .hero::after{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(to top,rgba(19,48,39,.82),rgba(19,48,39,.12) 50%,rgba(19,48,39,.05) 75%)}
+  .hero-scene{position:absolute;inset:0;width:100%;height:100%;z-index:0}
+  .hero-content{position:relative;z-index:2;padding-bottom:9vh;max-width:780px}
+  .hero h1{color:var(--cream);font-size:clamp(2.9rem,6.6vw,5.6rem);font-weight:300}
+  .hero h1 em{font-style:italic;font-weight:400}
+  .hero p{color:rgba(247,245,238,.92);font-size:clamp(1.05rem,1.6vw,1.32rem);margin:24px 0 34px;max-width:540px;font-weight:300}
+  .scroll-cue{position:absolute;bottom:28px;left:50%;transform:translateX(-50%);z-index:2;color:rgba(247,245,238,.65);font-size:.68rem;letter-spacing:.24em;text-transform:uppercase;display:flex;flex-direction:column;align-items:center;gap:9px}
+  .scroll-cue .line{width:1px;height:44px;background:rgba(247,245,238,.45);animation:cue 2.4s ease-in-out infinite}
+  @keyframes cue{0%,100%{transform:scaleY(.4);opacity:.3;transform-origin:top}50%{transform:scaleY(1);opacity:.8}}
+  .welcome{padding:120px 0 84px;text-align:center}
+  .welcome .eyebrow{display:block;margin-bottom:22px}
+  .welcome h2{font-size:clamp(1.9rem,3.6vw,3rem);max-width:800px;margin:0 auto;font-weight:300}
+  .welcome h2 em{font-style:italic;color:var(--green)}
+  .welcome .sub{max-width:560px;margin:26px auto 0;color:var(--muted);font-size:1.07rem}
+  .properties{padding:50px 0 116px}
+  .sec-head{display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:44px;gap:20px}
+  .sec-head h2{font-size:clamp(1.9rem,3vw,2.7rem);font-weight:300}
+  .sec-head p{color:var(--muted);max-width:340px;font-size:.98rem}
+  .home-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:28px}
+  .h-card{background:#fff;border-radius:6px;overflow:hidden;cursor:pointer;transition:.45s cubic-bezier(.2,.7,.3,1);border:1px solid var(--line);text-decoration:none;color:inherit;display:block}
+  .h-card:hover{transform:translateY(-6px);box-shadow:0 22px 46px -24px rgba(19,48,39,.5)}
+  .h-card-img{height:330px;position:relative;display:flex;align-items:center;justify-content:center;overflow:hidden}
+  .h-card-img span{color:rgba(247,245,238,.85);font-style:italic;font-family:'Fraunces',serif;font-size:.85rem;z-index:1;padding:0 20px;text-align:center}
+  .h-card-img::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(19,48,39,.4),transparent 58%)}
+  .img-reindeer{background:radial-gradient(110% 90% at 65% 25%,rgba(255,229,180,.55),transparent 55%),linear-gradient(160deg,#4f6047,#8f7647 95%)}
+  .img-cottage{background:linear-gradient(155deg,#7d6a4f,#b9a079 95%)}
+  .img-den{background:linear-gradient(160deg,#76859a,#c4ccd5 95%)}
+  .img-farmhouse{background:radial-gradient(120% 100% at 50% 18%,rgba(180,206,228,.5),transparent 50%),linear-gradient(165deg,#8f5742,#bd8460 95%)}
+  .h-card-body{padding:24px 28px 30px}
+  .h-card-body h3{font-size:1.58rem;font-weight:400}
+  .h-card-meta{color:var(--ochre);font-size:.74rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;margin-top:7px}
+  .h-card-body p{color:var(--muted);font-size:.96rem;margin-top:13px}
+  .h-card-link{margin-top:18px;display:inline-flex;align-items:center;gap:8px;font-weight:700;font-size:.84rem;color:var(--green);letter-spacing:.02em}
+  .h-card:hover .h-card-link{color:var(--ochre)}
+  .h-card-link svg{transition:.35s}.h-card:hover .h-card-link svg{transform:translateX(4px)}
+  .why{background:var(--green);color:var(--cream);padding:104px 0}
+  .why .eyebrow{color:#e0bd77}
+  .why h2{color:var(--cream);font-size:clamp(1.9rem,3vw,2.7rem);font-weight:300;margin:20px 0 56px;max-width:640px}
+  .why h2 em{font-style:italic}
+  .benefits{display:grid;grid-template-columns:repeat(4,1fr);gap:38px}
+  .benefit svg{width:32px;height:32px;stroke:#e0bd77;margin-bottom:16px}
+  .benefit h4{font-family:'Fraunces',serif;font-size:1.28rem;font-weight:400;margin-bottom:9px}
+  .benefit p{color:rgba(247,245,238,.72);font-size:.93rem}
+  .area{padding:116px 0}
+  .area-in{display:grid;grid-template-columns:1.05fr .95fr;gap:62px;align-items:center}
+  .area-img{height:460px;border-radius:6px;position:relative;overflow:hidden;background:radial-gradient(80% 50% at 70% 16%,rgba(255,246,219,.55),transparent 60%),linear-gradient(to bottom,#bcd0d8,#9aae7e 50%,#5f7647 100%)}
+  .area-img::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(19,48,39,.32),transparent 58%)}
+  .area-img-svg{position:absolute;inset:0;width:100%;height:100%}
+  .area-txt .eyebrow{display:block;margin-bottom:20px}
+  .area-txt h2{font-size:clamp(1.9rem,3.2vw,2.8rem);font-weight:300}
+  .area-txt h2 em{font-style:italic;color:var(--green)}
+  .area-txt p{color:var(--muted);margin:22px 0 30px;font-size:1.04rem}
+  @media(max-width:860px){
+    .home-grid,.benefits,.area-in,.foot-top{grid-template-columns:1fr}
+    .benefits{gap:32px}.sec-head{flex-direction:column;align-items:flex-start}
+    .area-img{height:300px;order:-1}
+  }
+</style>
+  <meta name="description" content="Self-catering holiday rentals on a working farm near Cannock Chase. The Farmhouse sleeps 12 with hot tub and sauna; Reindeer Lodge has its own wood-fired tub; The Cottage welcomes bikes and dogs; The Den hides a children's loft.">
+  <meta name="author" content="Kennedy Waters &amp; Woodland">
+  <meta name="theme-color" content="#1c4034">
+  <link rel="canonical" href="https://kennedywatersandwoodland.co.uk/">
+  <meta property="og:title" content="Kennedy Waters & Woodland — Four farm cottages in Staffordshire near Cannock Chase">
+  <meta property="og:description" content="Self-catering holiday rentals on a working farm near Cannock Chase. The Farmhouse sleeps 12 with hot tub and sauna; Reindeer Lodge has its own wood-fired tub; The Cottage welcomes bikes and dogs; The Den hides a children's loft.">
+  <meta property="og:url" content="https://kennedywatersandwoodland.co.uk/">
+  <meta property="og:image" content="https://kennedywatersandwoodland.co.uk/photos/reindeer%20sunset%20view.jpg">
+  <meta property="og:image:alt" content="Self-catering holiday rentals on a working farm near Cannock Chase. The Farmhouse sleeps 12 with hot tub and sauna; Reindeer Lodge has its own wood-fired tub; The Cottage welcomes bikes and dogs; The Den hides a children's loft.">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Kennedy Waters &amp; Woodland">
+  <meta property="og:locale" content="en_GB">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Kennedy Waters & Woodland — Four farm cottages in Staffordshire near Cannock Chase">
+  <meta name="twitter:description" content="Self-catering holiday rentals on a working farm near Cannock Chase. The Farmhouse sleeps 12 with hot tub and sauna; Reindeer Lodge has its own wood-fired tub; The Cottage welcomes bikes and dogs; The Den hides a children's loft.">
+  <meta name="twitter:image" content="https://kennedywatersandwoodland.co.uk/photos/reindeer%20sunset%20view.jpg">
+  <meta name="geo.region" content="GB-STS">
+  <meta name="geo.placename" content="Blithbury, Staffordshire">
+  <meta name="geo.position" content="52.7958;-1.8794">
+  <meta name="ICBM" content="52.7958, -1.8794">
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "@id": "https://kennedywatersandwoodland.co.uk/#organization",
+  "name": "Kennedy Waters & Woodland",
+  "url": "https://kennedywatersandwoodland.co.uk",
+  "logo": "https://kennedywatersandwoodland.co.uk/photos/reindeer%20sunset%20view.jpg",
+  "description": "Four self-catering holiday rentals on a working farm in Blithbury, Staffordshire, near Cannock Chase.",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Blithbury",
+    "addressRegion": "Staffordshire",
+    "postalCode": "WS15 3HZ",
+    "addressCountry": "GB"
+  }
+}
+</script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": "https://kennedywatersandwoodland.co.uk/#website",
+  "url": "https://kennedywatersandwoodland.co.uk",
+  "name": "Kennedy Waters & Woodland",
+  "description": "Self-catering holiday rentals on a working farm in Staffordshire.",
+  "publisher": {
+    "@id": "https://kennedywatersandwoodland.co.uk/#organization"
+  },
+  "inLanguage": "en-GB"
+}
+</script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LodgingBusiness",
+  "@id": "https://kennedywatersandwoodland.co.uk/#lodging",
+  "name": "Kennedy Waters & Woodland",
+  "description": "Four self-catering holiday rentals on a working farm near Cannock Chase in Staffordshire.",
+  "url": "https://kennedywatersandwoodland.co.uk",
+  "image": [
+    "https://kennedywatersandwoodland.co.uk/p",
+    "https://kennedywatersandwoodland.co.uk/photos/reindeer%20sunset%20view.jpg",
+    "https://kennedywatersandwoodland.co.uk/photos/reindeer%20hot%20tub.jpg",
+    "https://kennedywatersandwoodland.co.uk/photos/cottage%20living%203.avif",
+    "https://kennedywatersandwoodland.co.uk/photos/cottage%20exterior.avif",
+    "https://kennedywatersandwoodland.co.uk/photos/den%20living%20room%201.avif",
+    "https://kennedywatersandwoodland.co.uk/photos/den%20exterior.avif",
+    "https://kennedywatersandwoodland.co.uk/photos/farm%20dining%20room%201.jpg",
+    "https://kennedywatersandwoodland.co.uk/photos/farm%20exterior%20entrance.jpg"
+  ],
+  "logo": "https://kennedywatersandwoodland.co.uk/photos/reindeer%20sunset%20view.jpg",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Blithbury",
+    "addressRegion": "Staffordshire",
+    "postalCode": "WS15 3HZ",
+    "addressCountry": "GB"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 52.7958,
+    "longitude": -1.8794
+  },
+  "latitude": 52.7958,
+  "longitude": -1.8794,
+  "containsPlace": [
+    {
+      "@type": "VacationRental",
+      "name": "Reindeer Lodge",
+      "url": "https://kennedywatersandwoodland.co.uk/reindeer-lodge.html"
+    },
+    {
+      "@type": "VacationRental",
+      "name": "The Cottage",
+      "url": "https://kennedywatersandwoodland.co.uk/cottage.html"
+    },
+    {
+      "@type": "VacationRental",
+      "name": "The Den",
+      "url": "https://kennedywatersandwoodland.co.uk/the-den.html"
+    },
+    {
+      "@type": "VacationRental",
+      "name": "The Farmhouse",
+      "url": "https://kennedywatersandwoodland.co.uk/farmhouse.html"
+    }
+  ],
+  "checkinTime": "15:00",
+  "checkoutTime": "10:00",
+  "petsAllowed": true,
+  "priceRange": "££",
+  "amenityFeature": [
+    {
+      "@type": "LocationFeatureSpecification",
+      "name": "Free parking",
+      "value": true
+    },
+    {
+      "@type": "LocationFeatureSpecification",
+      "name": "WiFi",
+      "value": true
+    },
+    {
+      "@type": "LocationFeatureSpecification",
+      "name": "Self check-in",
+      "value": true
+    },
+    {
+      "@type": "LocationFeatureSpecification",
+      "name": "On-site fishing pond",
+      "value": true
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<nav id="nav">
+  <div class="wrap nav-in">
+    <a href="index.html" class="logo"><b>Kennedy Waters &amp; Woodland</b></a>
+    <div class="nav-links">
+      <a href="#properties">Properties</a>
+      <a href="fishing.html">Fishing</a>
+      <a href="area.html">The Area</a>
+      <a href="about.html">About</a>
+      <a href="contact.html" class="nav-cta">Enquire</a>
+    </div>
+    <div class="burger"><span></span><span></span><span></span></div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="hero-scene" style="position:absolute;inset:0;background-image:url('photos/reindeer%20sunset%20view.jpg');background-size:cover;background-position:center;z-index:0"></div>
+  <div class="wrap hero-content">
+    <div class="eyebrow reveal" style="color:#e0bd77">Staffordshire · Near Cannock Chase</div>
+    <h1 class="reveal d1">Four houses,<br><em>one working farm.</em></h1>
+    <p class="reveal d2">The Farmhouse, the Cottage, the Den and the Reindeer Lodge, book one for two, all four for thirty, or anything in between.</p>
+    <a href="#properties" class="btn btn-light reveal d3">
+      Explore our properties
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+    </a>
+  </div>
+  <div class="scroll-cue"><span>Scroll</span><div class="line"></div></div>
+</header>
+
+<section class="welcome wrap">
+  <span class="eyebrow reveal">Welcome</span>
+  <h2 class="reveal d1">A place to slow right down. Four retreats among <em>waters and woodland</em>, each with its own character.</h2>
+  <p class="sub reveal d2">Whether it's a rustic timber lodge with a wood-fired tub or a beamed farmhouse for the whole family, every stay is yours to unwind in, completely.</p>
+</section>
+
+<section class="properties wrap" id="properties">
+  <div class="sec-head reveal">
+    <h2>Our four stays</h2>
+    <p>Distinct in character, united by peace, privacy and a proper countryside welcome.</p>
+  </div>
+  <div class="home-grid">
+    <a href="reindeer-lodge.html" class="h-card reveal d1">
+      <div class="h-card-img img-reindeer" style="background-image:url('photos/reindeer%20sunset%20view.jpg');background-size:cover;background-position:center"></div>
+      <div class="h-card-body">
+        <h3>The Reindeer Lodge</h3>
+        <div class="h-card-meta">Sleeps 6 · Hot tub · Woodland edge</div>
+        <p>A timber lodge on a working farm, with a private wood-fired hot tub on covered decking and direct deck access from the master bedroom.</p>
+        <span class="h-card-link">View the lodge <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+      </div>
+    </a>
+    <a href="cottage.html" class="h-card reveal d2">
+      <div class="h-card-img img-cottage" style="background-image:url('photos/cottage%20living%203.avif');background-size:cover;background-position:center"></div>
+      <div class="h-card-body">
+        <h3>The Cottage</h3>
+        <div class="h-card-meta">Sleeps 6 · Pet-friendly · Bike storage</div>
+        <p>A two-bedroom cottage at the heart of the working farm, pet-friendly with secure bike storage for Cannock Chase trails.</p>
+        <span class="h-card-link">View the cottage <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+      </div>
+    </a>
+    <a href="the-den.html" class="h-card reveal d3">
+      <div class="h-card-img img-den" style="background-image:url('photos/den%20living%20room%201.avif');background-size:cover;background-position:center"></div>
+      <div class="h-card-body">
+        <h3>The Den</h3>
+        <div class="h-card-meta">Sleeps 3 · Loft den · Lia Gold design</div>
+        <p>A quiet farm stay for small families, with a single bed hidden in a magical loft den that children love.</p>
+        <span class="h-card-link">View the den <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+      </div>
+    </a>
+    <a href="farmhouse.html" class="h-card reveal d4">
+      <div class="h-card-img img-farmhouse" style="background-image:url('photos/farm%20dining%20room%201.jpg');background-size:cover;background-position:center"></div>
+      <div class="h-card-body">
+        <h3>The Farmhouse</h3>
+        <div class="h-card-meta">Sleeps 12 · Hot tub · Sauna</div>
+        <p>A six-bedroom restored farmhouse with a wood-fired hot tub on the terrace and a long table built for twelve.</p>
+        <span class="h-card-link">View the farmhouse <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+      </div>
+    </a>
+  </div>
+</section>
+
+<section class="why">
+  <div class="wrap">
+    <span class="eyebrow reveal">Why stay with us</span>
+    <h2 class="reveal d1">Everything you came to the countryside <em>for</em>, and nothing you didn't.</h2>
+    <div class="benefits">
+      <div class="benefit reveal d1">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><path d="M3 14h18M5 14v5M19 14v5M4 14a8 8 0 0116 0M9 7c0-1.5 1-2 1-3M13 7c0-1.5 1-2 1-3"/></svg>
+        <h4>Wood-fired hot tubs</h4>
+        <p>Light it yourself, soak under open skies. No one around for miles.</p>
+      </div>
+      <div class="benefit reveal d2">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><path d="M2 12c4-5 12-5 18 0-6 5-14 5-18 0z"/><circle cx="16" cy="11" r="1" fill="#e0bd77" stroke="none"/></svg>
+        <h4>Private sauna</h4>
+        <p>At The Farmhouse, alongside the wood-fired hot tub for groups looking to fully unwind.</p>
+      </div>
+      <div class="benefit reveal d3">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><path d="M12 22V9M12 9l4-3M12 13l-4-3M12 9c0-4 3-6 3-6"/></svg>
+        <h4>A working farm</h4>
+        <p>Sheep in the field, hens in the yard, lambing in spring.</p>
+      </div>
+      <div class="benefit reveal d4">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><path d="M9 12l2 2 4-4M12 3l8 4v5c0 5-3.5 7.5-8 9-4.5-1.5-8-4-8-9V7z"/></svg>
+        <h4>Book direct</h4>
+        <p>Best rates, real people, no middleman fees.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="area" id="area">
+  <div class="wrap area-in">
+    <div class="area-img reveal">
+      <div style="position:absolute;inset:0;background-image:url('photos/reindeer%20outside%20sheep%20grazing.jpg');background-size:cover;background-position:center"></div>
+    </div>
+    <div class="area-txt reveal d1">
+      <span class="eyebrow">The setting</span>
+      <h2>A corner of Staffordshire <em>worth lingering in.</em></h2>
+      <p>The farm sits in the village of Blithbury, between Rugeley and Uttoxeter, a fifteen-minute drive from Cannock Chase Forest and a short walk to the village pub. Birmingham is 45 minutes away, London just under three hours by train from Rugeley Trent Valley on the West Coast Main Line.</p>
+      <a href="area.html" class="btn">Discover the area
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-top">
+      <div class="foot-brand">
+        <span class="logo"><b>Kennedy Waters &amp; Woodland</b></span>
+        <p>Four countryside escapes with hot tubs, fishing lakes and room to breathe. Blithbury, Staffordshire.</p>
+      </div>
+      <div>
+        <h5>Stays</h5>
+        <ul>
+          <li><a href="reindeer-lodge.html">The Reindeer Lodge</a></li>
+          <li><a href="cottage.html">The Cottage</a></li>
+          <li><a href="the-den.html">The Den</a></li>
+          <li><a href="farmhouse.html">The Farmhouse</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Get in touch</h5>
+        <ul>
+          <li><a href="mailto:info@kennedywatersandwoodland.co.uk">info@kennedywatersandwoodland.co.uk</a></li>
+          <li><a href="fishing.html">Fishing</a></li>
+          <li><a href="area.html">The Area</a></li>
+          <li><a href="about.html">About us</a></li>
+          <li><a href="contact.html">Enquire</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 Kennedy Waters and Woodland</span>
+      <span>Privacy · Terms · Bookings handled securely</span>
+    </div>
+  </div>
+</footer>
+
+<script>/* Shared site behaviours, nav scroll state + reveal animations + mobile menu */
+(function(){
+  const nav=document.getElementById('nav');
+  if(nav && !nav.classList.contains('solid')){
+    addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>40),{passive:true});
+  }
+  const io=new IntersectionObserver((es)=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('in')}),{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+  addEventListener('load',()=>document.querySelectorAll('.hero .reveal, .prop-hero .reveal').forEach(el=>el.classList.add('in')));
+})();
+</script>
+</body>
+</html>

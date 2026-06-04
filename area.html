@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cannock Chase and the local area | Kennedy Waters & Woodland</title>
+<meta name="description" content="What's on the doorstep at Kennedy Waters and Woodland, pubs, walks, Cannock Chase, days out, and how to get here.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..600&family=Hanken+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>/* Kennedy Waters & Woodland, shared site styles */
+:root{
+  --green:#1c4034;
+  --green-deep:#133027;
+  --green-mid:#2f5447;
+  --bg:#f7f5ee;
+  --bg-soft:#eee9db;
+  --ochre:#a8813a;
+  --ink:#23271f;
+  --muted:#5e6356;
+  --line:#ddd6c4;
+  --cream:#f7f5ee;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Hanken Grotesk',sans-serif;background:var(--bg);color:var(--ink);font-weight:400;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+h1,h2,h3,.display{font-family:'Fraunces',serif;font-weight:400;line-height:1.1;letter-spacing:-.01em}
+.eyebrow{font-size:.72rem;letter-spacing:.26em;text-transform:uppercase;font-weight:700;color:var(--ochre)}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1200px;margin:0 auto;padding:0 36px}
+.btn{display:inline-flex;align-items:center;gap:11px;background:var(--green);color:var(--cream);padding:15px 32px;border-radius:4px;font-weight:600;font-size:.9rem;letter-spacing:.01em;transition:.3s;border:none;cursor:pointer}
+.btn:hover{background:var(--green-deep);transform:translateY(-1px)}
+.btn svg{transition:.3s}.btn:hover svg{transform:translateX(4px)}
+.btn-light{background:var(--cream);color:var(--green)}
+.btn-light:hover{background:#fff}
+.btn-ghost{background:transparent;color:var(--green);border:1px solid var(--green)}
+.btn-ghost:hover{background:var(--green);color:var(--cream)}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:1000;padding:20px 0;transition:.4s}
+nav.scrolled,nav.solid{background:rgba(247,245,238,.95);backdrop-filter:blur(10px);box-shadow:0 1px 0 var(--line);padding:13px 0}
+.nav-in{display:flex;align-items:center;justify-content:space-between}
+.logo{font-family:'Fraunces',serif;font-size:1.16rem;letter-spacing:.01em;color:var(--cream);transition:.4s}
+.logo b{font-weight:600}
+nav.scrolled .logo,nav.solid .logo{color:var(--green)}
+.nav-links{display:flex;gap:32px;align-items:center}
+.nav-links a{font-size:.85rem;font-weight:600;letter-spacing:.01em;color:rgba(247,245,238,.95);transition:.3s}
+nav.scrolled .nav-links a,nav.solid .nav-links a{color:var(--ink)}
+.nav-links a:hover{color:var(--ochre)}
+.nav-cta{background:rgba(247,245,238,.15);border:1px solid rgba(247,245,238,.55);padding:8px 18px;border-radius:4px}
+nav.scrolled .nav-cta,nav.solid .nav-cta{background:var(--green);border-color:var(--green);color:var(--cream)!important}
+.nav-cta:hover{background:var(--cream)!important;border-color:var(--cream)!important;color:var(--green)!important}
+.burger{display:none;flex-direction:column;gap:5px;cursor:pointer}
+.burger span{width:24px;height:2px;background:var(--cream)}
+nav.scrolled .burger span,nav.solid .burger span{background:var(--green)}
+
+/* FOOTER */
+footer{background:var(--green-deep);color:rgba(247,245,238,.8);padding:78px 0 34px;margin-top:80px}
+.foot-top{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:42px;padding-bottom:48px;border-bottom:1px solid rgba(247,245,238,.13)}
+.foot-brand .logo{color:var(--cream);font-size:1.36rem;display:block;margin-bottom:15px}
+.foot-brand p{font-size:.94rem;max-width:300px;color:rgba(247,245,238,.6)}
+footer h5{font-family:'Hanken Grotesk';text-transform:uppercase;letter-spacing:.16em;font-size:.7rem;color:#e0bd77;margin-bottom:18px;font-weight:700}
+footer ul{list-style:none}
+footer li{margin-bottom:11px;font-size:.94rem}
+footer li a:hover{color:#e0bd77}
+.foot-bottom{padding-top:26px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:14px;font-size:.8rem;color:rgba(247,245,238,.45)}
+
+.reveal{opacity:0;transform:translateY(26px);transition:1s cubic-bezier(.2,.7,.3,1)}
+.reveal.in{opacity:1;transform:none}
+.d1{transition-delay:.12s}.d2{transition-delay:.24s}.d3{transition-delay:.36s}.d4{transition-delay:.48s}
+
+/* ============= PROPERTY PAGE ============= */
+.prop-hero{position:relative;min-height:78vh;display:flex;align-items:flex-end;overflow:hidden;background:#3c4a3b}
+.prop-hero::after{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(to top,rgba(19,48,39,.85),rgba(19,48,39,.15) 50%,rgba(19,48,39,.1) 80%)}
+.prop-hero-scene{position:absolute;inset:0;width:100%;height:100%;z-index:0}
+.prop-hero-content{position:relative;z-index:2;padding-bottom:8vh;max-width:780px}
+.prop-hero .eyebrow{color:#e0bd77}
+.prop-hero h1{color:var(--cream);font-size:clamp(2.6rem,6vw,5rem);font-weight:300;margin-top:18px}
+.prop-hero h1 em{font-style:italic;font-weight:400}
+.prop-hero .lede{color:rgba(247,245,238,.92);font-size:clamp(1rem,1.4vw,1.22rem);margin-top:22px;max-width:600px;font-weight:300}
+
+/* facts bar */
+.facts{background:#fff;border-bottom:1px solid var(--line)}
+.facts-in{display:grid;grid-template-columns:repeat(6,1fr);gap:20px;padding:32px 0}
+.fact{padding:0 12px;border-right:1px solid var(--line)}
+.fact:last-child{border-right:none}
+.fact-label{font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);font-weight:600;margin-bottom:6px}
+.fact-value{font-family:'Fraunces',serif;font-size:1.08rem;color:var(--ink);line-height:1.3}
+
+/* main layout */
+.prop-body{padding:96px 0 60px}
+.prop-grid{display:grid;grid-template-columns:1.4fr .9fr;gap:80px;align-items:start}
+.prop-main h2{font-size:clamp(1.7rem,2.6vw,2.4rem);font-weight:300;margin-bottom:22px}
+.prop-main h2 em{font-style:italic;color:var(--green)}
+.prop-main p{color:var(--ink);font-size:1.06rem;margin-bottom:18px;line-height:1.75}
+.prop-main p:first-of-type::first-letter{font-family:'Fraunces',serif;font-size:3.2rem;float:left;line-height:.92;padding:6px 12px 0 0;color:var(--green);font-weight:400}
+.perfect-for{margin-top:38px;padding-top:32px;border-top:1px solid var(--line)}
+.perfect-for h3{font-family:'Fraunces',serif;font-size:1.3rem;font-weight:400;margin-bottom:18px}
+.perfect-for ul{list-style:none;display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.perfect-for li{font-size:.97rem;color:var(--muted);display:flex;align-items:center;gap:10px}
+.perfect-for li::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--ochre);flex-shrink:0}
+
+/* booking card sidebar */
+.book-card{background:#fff;border:1px solid var(--line);border-radius:6px;padding:32px;position:sticky;top:100px;box-shadow:0 18px 36px -28px rgba(19,48,39,.35)}
+.book-card .from{color:var(--muted);font-size:.84rem;letter-spacing:.05em;text-transform:uppercase;font-weight:600;margin-bottom:6px}
+.book-card .price{font-family:'Fraunces',serif;font-size:2.4rem;font-weight:400;color:var(--green);line-height:1}
+.book-card .price small{font-family:'Hanken Grotesk';font-size:.92rem;color:var(--muted);font-weight:500;margin-left:6px}
+.book-placeholder{margin:28px 0;padding:28px 22px;background:var(--bg);border:1px dashed var(--line);border-radius:6px;text-align:center}
+.book-placeholder svg{width:30px;height:30px;stroke:var(--ochre);margin-bottom:12px}
+.book-placeholder h4{font-family:'Fraunces',serif;font-size:1.08rem;font-weight:500;margin-bottom:6px;color:var(--green)}
+.book-placeholder p{font-size:.86rem;color:var(--muted);line-height:1.5}
+.book-card .btn{width:100%;justify-content:center;margin-top:8px}
+.book-mini-list{margin-top:26px;padding-top:24px;border-top:1px solid var(--line);font-size:.86rem;color:var(--muted)}
+.book-mini-list li{list-style:none;display:flex;align-items:center;gap:9px;padding:5px 0}
+.book-mini-list li::before{content:"✓";color:var(--green);font-weight:700}
+
+/* gallery */
+.gallery{padding:60px 0 90px;background:var(--bg-soft)}
+.gallery h2{font-size:clamp(1.7rem,2.6vw,2.3rem);font-weight:300;margin-bottom:36px;text-align:center}
+.gallery h2 em{font-style:italic;color:var(--green)}
+.gallery-grid{display:grid;grid-template-columns:2fr 1fr 1fr;grid-template-rows:repeat(2,210px);gap:14px}
+.gallery-grid .g{position:relative;overflow:hidden;border-radius:4px;display:flex;align-items:center;justify-content:center}
+.gallery-grid .g span{color:rgba(247,245,238,.85);font-style:italic;font-family:'Fraunces',serif;font-size:.8rem;z-index:1;padding:0 14px;text-align:center}
+.gallery-grid .g::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(19,48,39,.4),transparent 60%)}
+.gallery-grid .g:nth-child(1){grid-row:1/3}
+
+/* amenities band */
+.amen{padding:90px 0}
+.amen-head{text-align:center;margin-bottom:52px}
+.amen-head h2{font-size:clamp(1.7rem,2.6vw,2.3rem);font-weight:300}
+.amen-head h2 em{font-style:italic;color:var(--green)}
+.amen-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px 50px}
+.amen-item{display:flex;gap:16px;align-items:flex-start}
+.amen-item svg{width:24px;height:24px;stroke:var(--green);flex-shrink:0;margin-top:2px}
+.amen-item h4{font-family:'Hanken Grotesk';font-size:.78rem;text-transform:uppercase;letter-spacing:.14em;color:var(--muted);font-weight:600;margin-bottom:4px}
+.amen-item p{font-family:'Fraunces',serif;font-size:1.05rem;color:var(--ink);line-height:1.35}
+
+/* other-stays cross-sell */
+.others{background:var(--green);color:var(--cream);padding:96px 0}
+.others .eyebrow{color:#e0bd77}
+.others h2{color:var(--cream);font-size:clamp(1.7rem,2.7vw,2.4rem);font-weight:300;margin:18px 0 44px;max-width:600px}
+.others h2 em{font-style:italic}
+.others-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.other-card{background:rgba(247,245,238,.06);border:1px solid rgba(247,245,238,.15);border-radius:6px;overflow:hidden;transition:.35s;cursor:pointer}
+.other-card:hover{background:rgba(247,245,238,.11);transform:translateY(-4px)}
+.other-img{height:200px;position:relative;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.other-img span{color:rgba(247,245,238,.78);font-style:italic;font-family:'Fraunces',serif;font-size:.78rem;z-index:1;padding:0 16px;text-align:center}
+.other-img::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(19,48,39,.45),transparent 60%)}
+.other-card-body{padding:20px 22px 24px}
+.other-card-body h3{font-family:'Fraunces',serif;font-size:1.3rem;font-weight:400;color:var(--cream);margin-bottom:6px}
+.other-card-body .meta{font-size:.74rem;letter-spacing:.08em;text-transform:uppercase;color:#e0bd77;font-weight:700}
+.other-card-body p{font-size:.93rem;color:rgba(247,245,238,.7);margin-top:12px;line-height:1.55}
+
+/* tones, accent variants per property */
+.tone-terra{--accent-rich:#a8813a}
+.tone-gold{--accent-rich:#b09556}
+.tone-sage{--accent-rich:#7a8a5c}
+.tone-rust{--accent-rich:#b06a3e}
+
+@media(max-width:980px){
+  .prop-grid{grid-template-columns:1fr;gap:50px}
+  .book-card{position:static}
+  .facts-in{grid-template-columns:repeat(3,1fr);gap:24px 12px}
+  .fact:nth-child(3){border-right:none}
+  .gallery-grid{grid-template-columns:1fr 1fr;grid-template-rows:repeat(3,200px)}
+  .gallery-grid .g:nth-child(1){grid-row:1/2;grid-column:1/3;height:280px}
+  .amen-grid,.others-grid{grid-template-columns:1fr 1fr}
+  .perfect-for ul{grid-template-columns:1fr}
+}
+@media(max-width:640px){
+  .nav-links{display:none}.burger{display:flex}
+  .facts-in{grid-template-columns:repeat(2,1fr)}
+  .fact:nth-child(2){border-right:none}
+  .gallery-grid{grid-template-columns:1fr;grid-template-rows:repeat(4,200px)}
+  .gallery-grid .g:nth-child(1){grid-column:1/2;height:240px}
+  .amen-grid,.others-grid{grid-template-columns:1fr}
+  .foot-top{grid-template-columns:1fr}
+  .wrap{padding:0 22px}
+  .prop-body{padding:60px 0 40px}
+  .gallery,.amen,.others{padding:60px 0}
+}
+
+/* ===== content-page shared ===== */
+.page-hero{position:relative;min-height:46vh;display:flex;align-items:flex-end;overflow:hidden;padding-bottom:50px}
+.page-hero::after{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(to top,rgba(19,48,39,.78),rgba(19,48,39,.15) 60%,rgba(19,48,39,.05) 90%)}
+.page-hero-content{position:relative;z-index:2;max-width:780px;padding-top:120px}
+.page-hero .eyebrow{color:#e0bd77}
+.page-hero h1{color:var(--cream);font-size:clamp(2.4rem,5.4vw,4.4rem);font-weight:300;margin-top:14px}
+.page-hero h1 em{font-style:italic;font-weight:400}
+.page-hero .sub{color:rgba(247,245,238,.92);font-size:clamp(1rem,1.4vw,1.18rem);margin-top:18px;max-width:580px;font-weight:300}
+
+/* ===== AREA PAGE ===== */
+.area-intro{padding:90px 0 40px;max-width:760px;margin:0 auto;text-align:center}
+.area-intro h2{font-size:clamp(1.7rem,2.6vw,2.3rem);font-weight:300}
+.area-intro h2 em{font-style:italic;color:var(--green)}
+.area-intro p{color:var(--muted);margin-top:22px;font-size:1.08rem}
+.area-section{padding:70px 0;border-bottom:1px solid var(--line)}
+.area-section:last-of-type{border-bottom:none}
+.area-section-in{display:grid;grid-template-columns:.85fr 1.15fr;gap:60px;align-items:start}
+.area-section.flip .area-section-in{grid-template-columns:1.15fr .85fr}
+.area-section.flip .area-img-box{order:2}
+.area-img-box{height:380px;border-radius:6px;position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center}
+.area-img-box span{color:rgba(247,245,238,.85);font-style:italic;font-family:'Fraunces',serif;font-size:.85rem;z-index:1;padding:0 18px;text-align:center}
+.area-img-box::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(19,48,39,.3),transparent 60%)}
+.area-text .eyebrow{display:block;margin-bottom:14px}
+.area-text h3{font-size:clamp(1.6rem,2.2vw,2rem);font-weight:300;margin-bottom:18px}
+.area-text h3 em{font-style:italic;color:var(--green)}
+.area-text p{color:var(--ink);font-size:1.04rem;margin-bottom:14px;line-height:1.7}
+.area-list{margin-top:22px;display:grid;gap:14px}
+.area-list .item{padding:14px 0;border-top:1px solid var(--line);display:grid;grid-template-columns:auto 1fr auto;gap:18px;align-items:baseline}
+.area-list .item-name{font-family:'Fraunces',serif;font-size:1.08rem;color:var(--green)}
+.area-list .item-detail{color:var(--muted);font-size:.94rem}
+.area-list .item-dist{font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ochre);font-weight:700;white-space:nowrap}
+
+/* getting-here mini grid */
+.getting-here{background:var(--bg-soft);padding:90px 0}
+.getting-here-head{text-align:center;margin-bottom:46px}
+.getting-here-head h2{font-size:clamp(1.7rem,2.6vw,2.3rem);font-weight:300}
+.getting-here-head h2 em{font-style:italic;color:var(--green)}
+.travel-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.travel-card{background:#fff;border:1px solid var(--line);border-radius:6px;padding:30px}
+.travel-card svg{width:30px;height:30px;stroke:var(--green);margin-bottom:14px}
+.travel-card h4{font-family:'Fraunces',serif;font-size:1.25rem;font-weight:400;margin-bottom:12px}
+.travel-card p{color:var(--muted);font-size:.95rem;line-height:1.6}
+.travel-card .from{font-size:.74rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ochre);font-weight:700;margin-bottom:8px}
+
+/* ===== ABOUT PAGE ===== */
+.about-lead{padding:100px 0;max-width:760px;margin:0 auto;text-align:center}
+.about-lead h2{font-size:clamp(1.9rem,3.2vw,2.7rem);font-weight:300}
+.about-lead h2 em{font-style:italic;color:var(--green)}
+.about-lead p{color:var(--muted);margin-top:24px;font-size:1.1rem;line-height:1.75}
+.about-band{padding:90px 0;background:var(--bg-soft)}
+.about-band-in{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.about-band.flip .about-band-in{grid-template-columns:1fr 1fr}
+.about-band.flip .about-img{order:2}
+.about-img{height:420px;border-radius:6px;position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center}
+.about-img span{color:rgba(247,245,238,.85);font-style:italic;font-family:'Fraunces',serif;font-size:.85rem;z-index:1;padding:0 18px;text-align:center}
+.about-img::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(19,48,39,.32),transparent 60%)}
+.about-text .eyebrow{display:block;margin-bottom:14px}
+.about-text h3{font-size:clamp(1.6rem,2.4vw,2.1rem);font-weight:300;margin-bottom:18px}
+.about-text h3 em{font-style:italic;color:var(--green)}
+.about-text p{color:var(--ink);font-size:1.05rem;margin-bottom:14px;line-height:1.75}
+
+.principles{padding:100px 0;text-align:center}
+.principles h2{font-size:clamp(1.7rem,2.6vw,2.3rem);font-weight:300;margin-bottom:50px}
+.principles h2 em{font-style:italic;color:var(--green)}
+.principles-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:36px;max-width:1000px;margin:0 auto;text-align:left}
+.principle{padding:30px 28px;border:1px solid var(--line);border-radius:6px;background:#fff}
+.principle h4{font-family:'Fraunces',serif;font-size:1.25rem;font-weight:400;margin-bottom:12px;color:var(--green)}
+.principle p{color:var(--muted);font-size:.96rem;line-height:1.65}
+
+/* ===== CONTACT PAGE ===== */
+.contact-wrap{padding:90px 0}
+.contact-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:70px;align-items:start}
+.contact-form{background:#fff;border:1px solid var(--line);border-radius:6px;padding:40px}
+.contact-form h2{font-size:clamp(1.6rem,2.2vw,2rem);font-weight:300;margin-bottom:8px}
+.contact-form h2 em{font-style:italic;color:var(--green)}
+.contact-form .form-intro{color:var(--muted);margin-bottom:30px;font-size:.98rem}
+.field{margin-bottom:22px}
+.field label{display:block;font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:600;margin-bottom:8px}
+.field input,.field select,.field textarea{width:100%;padding:12px 14px;border:1px solid var(--line);border-radius:4px;font-family:'Hanken Grotesk',sans-serif;font-size:1rem;color:var(--ink);background:var(--bg);transition:.2s}
+.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--green);background:#fff}
+.field textarea{min-height:130px;resize:vertical}
+.field-row{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.contact-form .btn{width:100%;justify-content:center;margin-top:8px}
+
+.contact-side h3{font-family:'Fraunces',serif;font-size:1.4rem;font-weight:400;margin-bottom:18px}
+.contact-side .contact-item{padding:22px 0;border-bottom:1px solid var(--line)}
+.contact-side .contact-item:last-child{border-bottom:none}
+.contact-side .label{font-size:.74rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ochre);font-weight:700;margin-bottom:6px}
+.contact-side .value{font-family:'Fraunces',serif;font-size:1.1rem;color:var(--green);line-height:1.4}
+.contact-side .value a{color:inherit}
+.contact-side .note{color:var(--muted);font-size:.92rem;margin-top:6px}
+
+.map-box{margin-top:40px;height:260px;border-radius:6px;position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#9aae7e,#62794c)}
+.map-box span{color:rgba(247,245,238,.85);font-style:italic;font-family:'Fraunces',serif;font-size:.88rem;z-index:1}
+.map-box::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(19,48,39,.28),transparent 70%)}
+
+@media(max-width:980px){
+  .area-section-in,.area-section.flip .area-section-in,.about-band-in,.about-band.flip .about-band-in,.contact-grid{grid-template-columns:1fr;gap:40px}
+  .area-section.flip .area-img-box,.about-band.flip .about-img{order:-1}
+  .travel-grid,.principles-grid{grid-template-columns:1fr 1fr}
+  .area-img-box,.about-img{height:300px}
+  .field-row{grid-template-columns:1fr}
+}
+@media(max-width:640px){
+  .travel-grid,.principles-grid{grid-template-columns:1fr}
+  .contact-form{padding:28px 22px}
+}
+</style>
+  <meta name="description" content="A guide to the area around our working farm in Blithbury, Staffordshire. Cannock Chase walks, local pubs, days out, and the on-site fishing pond.">
+  <meta name="author" content="Kennedy Waters &amp; Woodland">
+  <meta name="theme-color" content="#1c4034">
+  <link rel="canonical" href="https://kennedywatersandwoodland.co.uk/area.html">
+  <meta property="og:title" content="Cannock Chase and the local area | Kennedy Waters & Woodland">
+  <meta property="og:description" content="A guide to the area around our working farm in Blithbury, Staffordshire. Cannock Chase walks, local pubs, days out, and the on-site fishing pond.">
+  <meta property="og:url" content="https://kennedywatersandwoodland.co.uk/area.html">
+  <meta property="og:image" content="https://kennedywatersandwoodland.co.uk/photos/reindeer%20sunset%20view.jpg">
+  <meta property="og:image:alt" content="A guide to the area around our working farm in Blithbury, Staffordshire. Cannock Chase walks, local pubs, days out, and the on-site fishing pond.">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Kennedy Waters &amp; Woodland">
+  <meta property="og:locale" content="en_GB">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Cannock Chase and the local area | Kennedy Waters & Woodland">
+  <meta name="twitter:description" content="A guide to the area around our working farm in Blithbury, Staffordshire. Cannock Chase walks, local pubs, days out, and the on-site fishing pond.">
+  <meta name="twitter:image" content="https://kennedywatersandwoodland.co.uk/photos/reindeer%20sunset%20view.jpg">
+  <meta name="geo.region" content="GB-STS">
+  <meta name="geo.placename" content="Blithbury, Staffordshire">
+  <meta name="geo.position" content="52.7958;-1.8794">
+  <meta name="ICBM" content="52.7958, -1.8794">
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": "https://kennedywatersandwoodland.co.uk/area.html#webpage",
+  "url": "https://kennedywatersandwoodland.co.uk/area.html",
+  "name": "Cannock Chase and the local area | Kennedy Waters & Woodland",
+  "description": "A guide to the area around our working farm in Blithbury, Staffordshire. Cannock Chase walks, local pubs, days out, and the on-site fishing pond.",
+  "isPartOf": {
+    "@id": "https://kennedywatersandwoodland.co.uk/#website"
+  },
+  "inLanguage": "en-GB",
+  "speakable": {
+    "@type": "SpeakableSpecification",
+    "cssSelector": [
+      "h1",
+      ".lede",
+      ".drop"
+    ]
+  }
+}
+</script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://kennedywatersandwoodland.co.uk/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "The Area",
+      "item": "https://kennedywatersandwoodland.co.uk/area.html"
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<nav id="nav" class="solid">
+  <div class="wrap nav-in">
+    <a href="index.html" class="logo"><b>Kennedy Waters &amp; Woodland</b></a>
+    <div class="nav-links">
+      <a href="index.html#properties">Properties</a>
+      <a href="fishing.html">Fishing</a>
+      <a href="area.html">The Area</a>
+      <a href="about.html">About</a>
+      <a href="contact.html" class="nav-cta">Enquire</a>
+    </div>
+    <div class="burger"><span></span><span></span><span></span></div>
+  </div>
+</nav>
+<header class="page-hero" style="background-image:url('photos/reindeer%20sunset%20view.jpg');background-size:cover;background-position:center">
+  <div class="wrap page-hero-content">
+    <span class="eyebrow reveal">The area</span>
+    <h1 class="reveal d1">The bit of Staffordshire<br><em>worth the journey.</em></h1>
+    <p class="sub reveal d2">Pubs in the village, Cannock Chase fifteen minutes away, and a fishing pond on the farm itself. Here's what's on the doorstep.</p>
+  </div>
+</header>
+
+<section class="wrap">
+  <div class="area-intro reveal">
+    <span class="eyebrow">Where you are</span>
+    <h2 style="margin-top:14px">Blithbury sits between Rugeley and Uttoxeter, on the northern fringe of <em>Cannock Chase AONB.</em></h2>
+    <p>Quiet, well-connected, and surrounded by the kind of countryside most people picture when they say "let's get away for a weekend." Here's the local detail, by what you might want to do.</p>
+  </div>
+</section>
+
+<section class="area-section">
+  <div class="wrap area-section-in">
+    <div class="area-img-box reveal" style="background-image:url('photos/cottage%20entrance%202.avif');background-size:cover;background-position:center"></div>
+    <div class="area-text reveal d1">
+      <span class="eyebrow">Eating &amp; drinking</span>
+      <h3>The village pub, <em>and a few more besides.</em></h3>
+      <p>Blithbury isn't large, but it punches above its weight for a pint and a plate. The Bull is the village pub, three minutes' walk from the Farmhouse gate, a Sunday roast that needs booking, and a fire that runs from October to April.</p><p>Beyond the village there's a handful of really good gastropubs and a couple of country restaurants worth the short drive. Reservations are wise on weekends.</p>
+      <div class="area-list"><div class="item"><span class="item-name">The Bull, Blithbury</span><span class="item-detail">Village pub, Sunday roasts, dog-friendly</span><span class="item-dist">3 min walk</span></div><div class="item"><span class="item-name">The Hollybush Inn, Salt</span><span class="item-detail">Listed 14th-century pub, modern British menu</span><span class="item-dist">12 min drive</span></div><div class="item"><span class="item-name">The Boat Inn, Lichfield</span><span class="item-detail">Canalside restaurant, well-regarded plates</span><span class="item-dist">20 min drive</span></div><div class="item"><span class="item-name">The Plough at Wall</span><span class="item-detail">Refined pub menu, good wine list</span><span class="item-dist">22 min drive</span></div><div class="item"><span class="item-name">The Swan with Two Necks, Blackbrook</span><span class="item-detail">Country pub, fire, great burgers</span><span class="item-dist">18 min drive</span></div></div>
+    </div>
+  </div>
+</section><section class="area-section flip">
+  <div class="wrap area-section-in">
+    <div class="area-img-box reveal" style="background-image:url('photos/reindeer%20outside%20sheep%20grazing.jpg');background-size:cover;background-position:center"></div>
+    <div class="area-text reveal d1">
+      <span class="eyebrow">Walks &amp; the outdoors</span>
+      <h3>Cannock Chase is <em>fifteen minutes</em> away.</h3>
+      <p>The farm sits on the northern edge of an Area of Outstanding Natural Beauty. Cannock Chase Forest is a 15-minute drive, 26 square miles of heathland and woodland with marked walking and cycling trails for every level. Bring boots, leave them on.</p><p>Closer to home, there's a five-mile circular walk straight from the farm gate, taking in the canal towpath and the Blithfield Reservoir bird hide. Maps are at every property.</p>
+      <div class="area-list"><div class="item"><span class="item-name">Cannock Chase Forest</span><span class="item-detail">AONB, marked trails, deer-spotting</span><span class="item-dist">15 min drive</span></div><div class="item"><span class="item-name">Blithfield Reservoir</span><span class="item-detail">Walks, fishing, birdwatching</span><span class="item-dist">10 min drive</span></div><div class="item"><span class="item-name">Trent &amp; Mersey Canal</span><span class="item-detail">Towpath walk from the farm</span><span class="item-dist">On the doorstep</span></div><div class="item"><span class="item-name">The Manifold Valley</span><span class="item-detail">Riverside walk &amp; cycling</span><span class="item-dist">35 min drive</span></div><div class="item"><span class="item-name">Ilam Park (Peak District)</span><span class="item-detail">National Trust estate &amp; walks</span><span class="item-dist">45 min drive</span></div></div>
+    </div>
+  </div>
+</section><section class="area-section">
+  <div class="wrap area-section-in">
+    <div class="area-img-box reveal" style="background-image:url('photos/farm%20drone%20of%20entrance.jpg');background-size:cover;background-position:center"></div>
+    <div class="area-text reveal d1">
+      <span class="eyebrow">Days out</span>
+      <h3>Castles, cathedrals, <em>steam trains.</em></h3>
+      <p>There's plenty within an hour's drive, proper National Trust manor houses, a small medieval cathedral, a steam railway and one of the country's better zoos. Good rainy-day insurance and good sunny-day plans both.</p>
+      <div class="area-list"><div class="item"><span class="item-name">Shugborough Estate (NT)</span><span class="item-detail">Grand 18th-century house &amp; gardens</span><span class="item-dist">15 min drive</span></div><div class="item"><span class="item-name">Lichfield Cathedral</span><span class="item-detail">Three-spired medieval cathedral</span><span class="item-dist">22 min drive</span></div><div class="item"><span class="item-name">Alton Towers</span><span class="item-detail">If the kids insist</span><span class="item-dist">35 min drive</span></div><div class="item"><span class="item-name">Churnet Valley Railway</span><span class="item-detail">Restored steam railway</span><span class="item-dist">30 min drive</span></div><div class="item"><span class="item-name">Trentham Gardens</span><span class="item-detail">Italian gardens &amp; lakeside walk</span><span class="item-dist">40 min drive</span></div><div class="item"><span class="item-name">Twycross Zoo</span><span class="item-detail">Well-regarded family day out</span><span class="item-dist">45 min drive</span></div></div>
+    </div>
+  </div>
+</section><section class="area-section flip">
+  <div class="wrap area-section-in">
+    <div class="area-img-box reveal" style="background-image:url('photos/reindeer%20sunset%20view.jpg');background-size:cover;background-position:center"></div>
+    <div class="area-text reveal d1">
+      <span class="eyebrow">Fishing</span>
+      <h3>Reservoir, river, <em>or the pond on site.</em></h3>
+      <p>There's a small course fishing pond on the farm itself, free to use for guests, no permit needed, rods can be borrowed from the Farmhouse. For the more serious angler, Blithfield Reservoir is one of the Midlands' best trout fisheries and a 10-minute drive away.</p>
+      <div class="area-list"><div class="item"><span class="item-name">On-site pond</span><span class="item-detail">Carp &amp; perch, guests free, rods provided</span><span class="item-dist">On the doorstep</span></div><div class="item"><span class="item-name">Blithfield Reservoir</span><span class="item-detail">Trout fishery, day &amp; season permits</span><span class="item-dist">10 min drive</span></div><div class="item"><span class="item-name">River Trent (Yoxall)</span><span class="item-detail">Mixed coarse fishing</span><span class="item-dist">12 min drive</span></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="getting-here">
+  <div class="wrap">
+    <div class="getting-here-head reveal">
+      <span class="eyebrow">Getting here</span>
+      <h2 style="margin-top:14px">Closer than you <em>think.</em></h2>
+    </div>
+    <div class="travel-grid">
+      <div class="travel-card reveal d1">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 17h16M5 17l1-7h12l1 7M7 10V7a2 2 0 012-2h6a2 2 0 012 2v3M7 20a2 2 0 100-4 2 2 0 000 4zM17 20a2 2 0 100-4 2 2 0 000 4z"/></svg>
+        <div class="from">By car</div>
+        <h4>Easy to find, hard to leave.</h4>
+        <p>Birmingham 45 min &middot; Manchester 1h 20 &middot; London 2h 30 &middot; Sheffield 1h 10. Off the A515 between Lichfield and Uttoxeter, postcode and what3words sent on booking.</p>
+      </div>
+      <div class="travel-card reveal d2">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="14" rx="2"/><path d="M4 11h16M8 18v3M16 18v3M8 7h.01M16 7h.01"/></svg>
+        <div class="from">By train</div>
+        <h4>Rugeley Trent Valley, then a taxi.</h4>
+        <p>Direct trains from London Euston in just under three hours on the West Coast Main Line. Twelve-minute taxi from the station, we can pre-book one for you.</p>
+      </div>
+      <div class="travel-card reveal d3">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16l-5-5-5 5M3 8l7 7-7-7zM12 2v8"/></svg>
+        <div class="from">By air</div>
+        <h4>Birmingham &amp; East Midlands.</h4>
+        <p>Birmingham Airport is 45 minutes by car. East Midlands is 50 minutes. Manchester is 1h 30 if you're coming from further afield.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<footer>
+  <div class="wrap">
+    <div class="foot-top">
+      <div class="foot-brand">
+        <span class="logo"><b>Kennedy Waters &amp; Woodland</b></span>
+        <p>Four countryside escapes with hot tubs, fishing lakes and room to breathe. Blithbury, Staffordshire.</p>
+      </div>
+      <div>
+        <h5>Stays</h5>
+        <ul>
+          <li><a href="reindeer-lodge.html">The Reindeer Lodge</a></li>
+          <li><a href="cottage.html">The Cottage</a></li>
+          <li><a href="the-den.html">The Den</a></li>
+          <li><a href="farmhouse.html">The Farmhouse</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Get in touch</h5>
+        <ul>
+          <li><a href="mailto:info@kennedywatersandwoodland.co.uk">info@kennedywatersandwoodland.co.uk</a></li>
+          <li><a href="fishing.html">Fishing</a></li>
+          <li><a href="area.html">The Area</a></li>
+          <li><a href="about.html">About us</a></li>
+          <li><a href="contact.html">Enquire</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>&copy; 2026 Kennedy Waters and Woodland</span>
+      <span>Privacy &middot; Terms &middot; Bookings handled securely</span>
+    </div>
+  </div>
+</footer>
+<script>/* Shared site behaviours, nav scroll state + reveal animations + mobile menu */
+(function(){
+  const nav=document.getElementById('nav');
+  if(nav && !nav.classList.contains('solid')){
+    addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>40),{passive:true});
+  }
+  const io=new IntersectionObserver((es)=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('in')}),{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+  addEventListener('load',()=>document.querySelectorAll('.hero .reveal, .prop-hero .reveal').forEach(el=>el.classList.add('in')));
+})();
+</script>
+</body>
+</html>
