@@ -384,20 +384,36 @@ footer li a:hover{color:#e0bd77}
   ]
 }
 </script>
+<style id="mobile-menu">
+/* Mobile menu: burger button + drop-down links */
+.burger{background:none;border:0;padding:10px;margin:-10px -10px -10px 0;-webkit-tap-highlight-color:transparent}
+.burger span{display:block;transition:transform .3s,opacity .3s}
+@media(max-width:640px){
+  nav.open{background:rgba(247,245,238,.98);box-shadow:0 1px 0 var(--line)}
+  nav.open .logo{color:var(--green)}
+  nav.open .burger span{background:var(--green)}
+  nav.open .burger span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+  nav.open .burger span:nth-child(2){opacity:0}
+  nav.open .burger span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+  nav.open .nav-links{display:flex;flex-direction:column;align-items:stretch;gap:0;position:absolute;top:100%;left:0;right:0;background:var(--cream);box-shadow:0 12px 24px rgba(0,0,0,.08);padding:6px 22px 22px}
+  nav.open .nav-links a{color:var(--ink);font-size:1rem;padding:15px 0;border-bottom:1px solid var(--line)}
+  nav.open .nav-links a.nav-cta{margin-top:16px;border:0;text-align:center;padding:14px 0;background:var(--green);color:var(--cream)!important}
+}
+</style>
 </head>
 <body>
 
 <nav id="nav">
   <div class="wrap nav-in">
     <a href="index.html" class="logo"><b>Kennedy Waters &amp; Woodland</b></a>
-    <div class="nav-links">
+    <div class="nav-links" id="nav-links">
       <a href="#properties">Properties</a>
       <a href="fishing.html">Fishing</a>
       <a href="area.html">The Area</a>
       <a href="about.html">About</a>
       <a href="contact.html" class="nav-cta">Enquire</a>
     </div>
-    <div class="burger"><span></span><span></span><span></span></div>
+    <button type="button" class="burger" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links"><span></span><span></span><span></span></button>
   </div>
 </nav>
 
@@ -553,6 +569,17 @@ footer li a:hover{color:#e0bd77}
   const io=new IntersectionObserver((es)=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('in')}),{threshold:.12});
   document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
   addEventListener('load',()=>document.querySelectorAll('.hero .reveal, .prop-hero .reveal').forEach(el=>el.classList.add('in')));
+  const burger=document.querySelector('.burger');
+  if(nav && burger){
+    const setOpen=(open)=>{
+      nav.classList.toggle('open',open);
+      burger.setAttribute('aria-expanded',open?'true':'false');
+      burger.setAttribute('aria-label',open?'Close menu':'Open menu');
+    };
+    burger.addEventListener('click',()=>setOpen(!nav.classList.contains('open')));
+    nav.querySelectorAll('.nav-links a').forEach(a=>a.addEventListener('click',()=>setOpen(false)));
+    addEventListener('keydown',(e)=>{if(e.key==='Escape')setOpen(false)});
+  }
 })();
 </script>
 </body>
