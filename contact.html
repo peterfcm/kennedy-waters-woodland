@@ -374,6 +374,13 @@ footer li a:hover{color:#e0bd77}
   nav.open .nav-links a.nav-cta{margin-top:16px;border:0;text-align:center;padding:14px 0;background:var(--green);color:var(--cream)!important}
 }
 </style>
+<style id="enquiry-form-css">
+.hp-field{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.form-status{margin-top:18px;padding:14px 16px;border-radius:4px;font-size:.98rem;line-height:1.5}
+.form-status.ok{background:#eef3ef;border:1px solid #b9cfc2;color:var(--green)}
+.form-status.err{background:#fbf1ee;border:1px solid #e6c3b8;color:#7a2e1c}
+.form-status a{color:inherit;text-decoration:underline}
+</style>
 </head>
 <body>
 <nav id="nav" class="solid">
@@ -399,35 +406,38 @@ footer li a:hover{color:#e0bd77}
 
 <section class="contact-wrap">
   <div class="wrap contact-grid">
-    <form class="contact-form reveal" onsubmit="event.preventDefault();alert('Form submission will be wired up at launch. Your message would be sent to info@kennedywatersandwoodland.co.uk');">
+    <form class="contact-form reveal" id="enquiry-form" name="enquiry" method="POST" action="/contact.html" data-netlify="true" netlify-honeypot="bot-field">
+      <input type="hidden" name="form-name" value="enquiry">
+      <p class="hp-field" aria-hidden="true"><label>Leave this empty <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
       <h2>Send us a <em>note.</em></h2>
       <p class="form-intro">Tell us roughly what you're after, dates, which property, how many of you, and we'll come back within the day with availability and pricing.</p>
       <div class="field-row">
-        <div class="field"><label for="fn">First name</label><input type="text" id="fn" required></div>
-        <div class="field"><label for="ln">Last name</label><input type="text" id="ln" required></div>
+        <div class="field"><label for="fn">First name</label><input type="text" id="fn" name="first_name" autocomplete="given-name" required></div>
+        <div class="field"><label for="ln">Last name</label><input type="text" id="ln" name="last_name" autocomplete="family-name" required></div>
       </div>
       <div class="field-row">
-        <div class="field"><label for="em">Email</label><input type="email" id="em" required></div>
-        <div class="field"><label for="ph">Phone (optional)</label><input type="tel" id="ph"></div>
+        <div class="field"><label for="em">Email</label><input type="email" id="em" name="email" autocomplete="email" required></div>
+        <div class="field"><label for="ph">Phone (optional)</label><input type="tel" id="ph" name="phone" autocomplete="tel"></div>
       </div>
       <div class="field"><label for="pr">Which property</label>
-        <select id="pr">
+        <select id="pr" name="property">
           <option>Not sure yet, recommend one</option>
           <option>The Farmhouse (sleeps 12)</option>
           <option>The Reindeer Lodge (sleeps 6)</option>
-          <option>The Cottage (sleeps 4)</option>
-          <option>The Den (sleeps 2)</option>
+          <option>The Cottage (sleeps 6)</option>
+          <option>The Den (sleeps 3)</option>
           <option>The whole site (all four)</option>
         </select>
       </div>
       <div class="field-row">
-        <div class="field"><label for="ci">Arrival (rough)</label><input type="text" id="ci" placeholder="e.g. last weekend in October"></div>
-        <div class="field"><label for="nt">Nights</label><input type="text" id="nt" placeholder="e.g. 3"></div>
+        <div class="field"><label for="ci">Arrival (rough)</label><input type="text" id="ci" name="arrival" placeholder="e.g. last weekend in October"></div>
+        <div class="field"><label for="nt">Nights</label><input type="text" id="nt" name="nights" placeholder="e.g. 3"></div>
       </div>
-      <div class="field"><label for="ms">Message</label><textarea id="ms" placeholder="Anything we should know, number of guests, dogs, special occasion, accessibility needs..."></textarea></div>
+      <div class="field"><label for="ms">Message</label><textarea id="ms" name="message" placeholder="Anything we should know, number of guests, dogs, special occasion, accessibility needs..."></textarea></div>
       <button type="submit" class="btn">Send enquiry
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
       </button>
+      <p class="form-status" id="form-status" role="status" aria-live="polite" hidden></p>
     </form>
 
     <aside class="contact-side reveal d1">
@@ -512,6 +522,29 @@ footer li a:hover{color:#e0bd77}
     nav.querySelectorAll('.nav-links a').forEach(a=>a.addEventListener('click',()=>setOpen(false)));
     addEventListener('keydown',(e)=>{if(e.key==='Escape')setOpen(false)});
   }
+})();
+</script>
+<script>/* Enquiry form: send to Netlify Forms without leaving the page */
+(function(){
+  const form=document.getElementById('enquiry-form');
+  const status=document.getElementById('form-status');
+  if(!form||!status) return;
+  const btn=form.querySelector('button[type="submit"]');
+  const show=(cls,html)=>{status.className='form-status '+cls;status.innerHTML=html;status.hidden=false;};
+  form.addEventListener('submit',async(e)=>{
+    e.preventDefault();
+    btn.disabled=true;
+    try{
+      const body=new URLSearchParams(new FormData(form)).toString();
+      const r=await fetch('/',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body});
+      if(!r.ok) throw new Error('HTTP '+r.status);
+      form.reset();
+      show('ok','Thank you, your enquiry has been sent. We\'ll be in touch soon.');
+      if(typeof gtag==='function') gtag('event','generate_lead',{form_name:'enquiry'});
+    }catch(err){
+      show('err','Sorry, that didn\'t send. Please email us at <a href="mailto:info@kennedywatersandwoodland.co.uk">info@kennedywatersandwoodland.co.uk</a>.');
+    }finally{ btn.disabled=false; }
+  });
 })();
 </script>
 </body>
