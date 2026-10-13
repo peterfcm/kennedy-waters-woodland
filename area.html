@@ -374,6 +374,14 @@ footer li a:hover{color:#e0bd77}
   nav.open .nav-links a.nav-cta{margin-top:16px;border:0;text-align:center;padding:14px 0;background:var(--green);color:var(--cream)!important}
 }
 </style>
+<style id="area-list-mobile">
+@media(max-width:640px){
+  .area-list .item{grid-template-columns:1fr auto;gap:4px 14px}
+  .area-list .item-name{grid-column:1;grid-row:1}
+  .area-list .item-dist{grid-column:2;grid-row:1}
+  .area-list .item-detail{grid-column:1/-1;grid-row:2}
+}
+</style>
 </head>
 <body>
 <nav id="nav" class="solid">
@@ -411,7 +419,7 @@ footer li a:hover{color:#e0bd77}
     <div class="area-text reveal d1">
       <span class="eyebrow">Eating &amp; drinking</span>
       <h3>Good pubs, <em>a short drive away.</em></h3>
-      <p>After a day on Cannock Chase, take your pick of six top-rated country pubs, all within 20 minutes and all rated 4.5 stars or more on Google. Book the Sunday roast, bring the dog, and give the kitchen the night off.</p><p>Beyond the village there's a handful of really good gastropubs and a couple of country restaurants worth the short drive. Reservations are wise on weekends.</p>
+      <p>After a day on Cannock Chase, take your pick of six top-rated country pubs, all within 20 minutes and all rated 4.5 stars or more on Google. Book the Sunday roast, bring the dog, and give the kitchen the night off.</p><p>Reservations are wise on weekends.</p>
       <div class="area-list"><div class="item"><span class="item-name">The Bagot Arms, Abbots Bromley</span><span class="item-detail">Village pub, Sunday roasts</span><span class="item-dist">5 min drive</span></div><div class="item"><span class="item-name">The Shoulder of Mutton, Hamstall Ridware</span><span class="item-detail">Family-run inn, dog-friendly</span><span class="item-dist">5 min drive</span></div><div class="item"><span class="item-name">Ye Olde Dun Cow, Colton</span><span class="item-detail">Village inn, food and rooms</span><span class="item-dist">5 min drive</span></div><div class="item"><span class="item-name">The Olde Peculiar, Handsacre</span><span class="item-detail">Village pub, home-cooked food</span><span class="item-dist">10 min drive</span></div><div class="item"><span class="item-name">The Chetwynd Arms, Upper Longdon</span><span class="item-detail">Country pub on the edge of the Chase, dog-friendly</span><span class="item-dist">15 min drive</span></div><div class="item"><span class="item-name">The Swan with Two Necks, Longdon</span><span class="item-detail">Country pub, fire, great burgers</span><span class="item-dist">18 min drive</span></div><div class="item"><span class="item-name">The Boat Inn, Lichfield</span><span class="item-detail">Canalside restaurant, well-regarded plates</span><span class="item-dist">20 min drive</span></div></div>
     </div>
   </div>
